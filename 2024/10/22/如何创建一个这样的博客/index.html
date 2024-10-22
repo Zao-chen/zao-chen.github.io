@@ -15,19 +15,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#2f4154">
+  <meta name="theme-color" content="#FF8C00">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="如何创建参考的是这样的一篇博客[创建教程](https:&#x2F;&#x2F;blog.csdn.net&#x2F;yaorongke&#x2F;article&#x2F;details&#x2F;119089190 一些问题配置文件不更新有的时候会遇到配置文件更新了不显示，这里就需要使用命令 12hexo ghexo d  来重新部署 push的适合报fatal: unable to access经典的github走错代理，使用命令来指定端口 12gi">
+    <meta name="description" content="介绍一下这个博客是如何创建出来的 &lt; 如何创建参考的是这样的一篇博客创建教程 一些问题配置文件不更新有的时候会遇到配置文件更新了不显示，这里就需要使用命令 12hexo ghexo d  来重新部署 push的适合报fatal: unable to access经典的github走错代理，使用命令来指定端口 12git config --global https.proxy http:&#x2F;&#x2F;1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何创建一个这样的博客">
 <meta property="og:url" content="https://zao-chen.github.io/2024/10/22/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%BF%99%E6%A0%B7%E7%9A%84%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="早晨吃早晨">
-<meta property="og:description" content="如何创建参考的是这样的一篇博客[创建教程](https:&#x2F;&#x2F;blog.csdn.net&#x2F;yaorongke&#x2F;article&#x2F;details&#x2F;119089190 一些问题配置文件不更新有的时候会遇到配置文件更新了不显示，这里就需要使用命令 12hexo ghexo d  来重新部署 push的适合报fatal: unable to access经典的github走错代理，使用命令来指定端口 12gi">
+<meta property="og:description" content="介绍一下这个博客是如何创建出来的 &lt; 如何创建参考的是这样的一篇博客创建教程 一些问题配置文件不更新有的时候会遇到配置文件更新了不显示，这里就需要使用命令 12hexo ghexo d  来重新部署 push的适合报fatal: unable to access经典的github走错代理，使用命令来指定端口 12git config --global https.proxy http:&#x2F;&#x2F;1">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-22T12:47:23.000Z">
-<meta property="article:modified_time" content="2024-10-22T12:57:38.044Z">
+<meta property="article:modified_time" content="2024-10-22T13:13:16.585Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Web">
 <meta name="twitter:card" content="summary_large_image">
@@ -197,7 +197,7 @@
 <div id="banner" class="banner" parallax=true
      style="background: url('/img/bg.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 1)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          106 字
+          115 字
         
       </span>
     
@@ -286,7 +286,9 @@
             
               <div class="markdown-body">
                 
-                <h1 id="如何创建"><a href="#如何创建" class="headerlink" title="如何创建"></a>如何创建</h1><p>参考的是这样的一篇博客<br>[创建教程](<a target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119089190">https://blog.csdn.net/yaorongke/article/details/119089190</a></p>
+                <p>介绍一下这个博客是如何创建出来的</p>
+<p>&lt;</p>
+<h1 id="如何创建"><a href="#如何创建" class="headerlink" title="如何创建"></a>如何创建</h1><p>参考的是这样的一篇博客<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119089190">创建教程</a></p>
 <h1 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h1><h2 id="配置文件不更新"><a href="#配置文件不更新" class="headerlink" title="配置文件不更新"></a>配置文件不更新</h2><p>有的时候会遇到配置文件更新了不显示，这里就需要使用命令</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css">hexo <span class="hljs-selector-tag">g</span><br>hexo d<br></code></pre></td></tr></table></figure>
 
@@ -533,7 +535,37 @@
   
   
 </div>
-
+<div>
+  <span id="timeDate">载入天数...</span>
+  <span id="times">载入时分秒...</span>
+  <script>
+  var now = new Date();
+  function createtime(){
+      var grt= new Date("10/22/2024 00:00:00");//此处修改你的建站时间或者网站上线时间
+      now.setTime(now.getTime()+250);
+      days = (now - grt ) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if(String(hnum).length ==1 ){
+          hnum = "0" + hnum;
+      }
+      minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if(String(mnum).length ==1 ){
+                mnum = "0" + mnum;
+      }
+      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if(String(snum).length ==1 ){
+                snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";  //此次自定义显示内容
+      document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+  }  //此次自定义显示内容
+  setInterval("createtime()",250);
+  </script>
+</div>
   </footer>
 
   <!-- Scripts -->

@@ -15,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#FF8C00">
+  <meta name="theme-color" content="#F4A460">
   <meta name="author" content="Zao_chen">
   <meta name="keywords" content="">
   
@@ -188,7 +188,7 @@
 <div id="banner" class="banner" parallax=true
      style="background: url('/img/bg.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0)">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.2)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
@@ -423,14 +423,13 @@
 
   
   
-</div>
-<div>
+  <div>
   <span id="timeDate">载入天数...</span>
   <span id="times">载入时分秒...</span>
   <script>
   var now = new Date();
   function createtime(){
-      var grt= new Date("10/22/2024 00:00:00");//此处修改你的建站时间或者网站上线时间
+      var grt= new Date("10/20/2024 00:00:00");//此处修改你的建站时间或者网站上线时间
       now.setTime(now.getTime()+250);
       days = (now - grt ) / 1000 / 60 / 60 / 24;
       dnum = Math.floor(days);
@@ -455,6 +454,8 @@
   setInterval("createtime()",250);
   </script>
 </div>
+</div>
+
   </footer>
 
   <!-- Scripts -->

@@ -19,34 +19,25 @@
   <meta name="author" content="Zao_chen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漫画嵌字中网点的对话框的处理">
+    <meta name="description" content="介绍一下如何给Qt程序做一个系统托盘">
 <meta property="og:type" content="article">
-<meta property="og:title" content="漫画如何嵌网点背景的对话框">
-<meta property="og:url" content="https://zao-chen.github.io/2024/11/07/%E6%BC%AB%E7%94%BB%E5%A6%82%E4%BD%95%E5%B5%8C%E7%BD%91%E7%82%B9%E8%83%8C%E6%99%AF%E7%9A%84%E5%AF%B9%E8%AF%9D%E6%A1%86/index.html">
+<meta property="og:title" content="Qt如何给程序添加系统托盘">
+<meta property="og:url" content="https://zao-chen.github.io/2024/11/19/Qt%E5%A6%82%E4%BD%95%E7%BB%99%E7%A8%8B%E5%BA%8F%E6%B7%BB%E5%8A%A0%E7%B3%BB%E7%BB%9F%E6%89%98%E7%9B%98/index.html">
 <meta property="og:site_name" content="早城">
-<meta property="og:description" content="漫画嵌字中网点的对话框的处理">
+<meta property="og:description" content="介绍一下如何给Qt程序做一个系统托盘">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zao-chen.github.io/img/image-20241107200053080.png">
-<meta property="og:image" content="https://zao-chen.github.io/img/image-20241107200413889.png">
-<meta property="og:image" content="https://zao-chen.github.io/img/image-20241107200825398.png">
-<meta property="og:image" content="https://zao-chen.github.io/img/image-20241107201020327.png">
-<meta property="og:image" content="https://zao-chen.github.io/img/image-20241107201137995.png">
-<meta property="og:image" content="https://zao-chen.github.io/img/image-20241107201737812.png">
-<meta property="og:image" content="https://zao-chen.github.io/img/image-20241107201914824.png">
-<meta property="og:image" content="https://zao-chen.github.io/img/image-20241107202041415.png">
-<meta property="og:image" content="https://zao-chen.github.io/img/image-20241107202208912.png">
-<meta property="og:image" content="https://zao-chen.github.io/img/image-20241107202414428.png">
-<meta property="og:image" content="https://zao-chen.github.io/img/image-20241107202536923.png">
-<meta property="article:published_time" content="2024-11-07T11:55:23.000Z">
-<meta property="article:modified_time" content="2024-11-07T12:27:01.284Z">
+<meta property="og:image" content="https://zao-chen.github.io/img/image-20241119194056367.png">
+<meta property="article:published_time" content="2024-11-19T11:39:04.000Z">
+<meta property="article:modified_time" content="2024-11-19T11:52:47.303Z">
 <meta property="article:author" content="Zao_chen">
-<meta property="article:tag" content="漫画嵌字">
+<meta property="article:tag" content="Qt">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zao-chen.github.io/img/image-20241107200053080.png">
+<meta name="twitter:image" content="https://zao-chen.github.io/img/image-20241119194056367.png">
   
   
   
-  <title>漫画如何嵌网点背景的对话框 - 早城</title>
+  <title>Qt如何给程序添加系统托盘 - 早城</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="漫画如何嵌网点背景的对话框"></span>
+            <span id="subtitle" data-typed-text="Qt如何给程序添加系统托盘"></span>
           
         </div>
 
@@ -224,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-11-07 19:55" pubdate>
-          2024年11月7日 晚上
+        <time datetime="2024-11-19 19:39" pubdate>
+          2024年11月19日 晚上
         </time>
       </span>
     
@@ -236,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          559 字
+          446 字
         
       </span>
     
@@ -247,7 +238,7 @@
         
         
         
-          5 分钟
+          4 分钟
         
       </span>
     
@@ -293,46 +284,48 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">漫画如何嵌网点背景的对话框</h1>
+            <h1 id="seo-header">Qt如何给程序添加系统托盘</h1>
             
             
               <div class="markdown-body">
                 
-                <p>漫画嵌字中网点的对话框的处理</p>
+                <p>介绍一下如何给Qt程序做一个系统托盘</p>
 <span id="more"></span>
 
-<p>这个系列会记录一下嵌字的个人经验，如果有更好的方法可以评论区分享。</p>
-<h1 id="问题介绍"><a href="#问题介绍" class="headerlink" title="问题介绍"></a>问题介绍</h1><p>在嵌字中我们会遇到这样的对话框</p>
-<p><img src="/../img/image-20241107200053080.png" srcset="/img/loading.gif" lazyload alt="image-20241107200053080"></p>
-<p>对于这种对话框，我们应该如何处理呢？</p>
-<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><h2 id="方法1-使用仿制图章"><a href="#方法1-使用仿制图章" class="headerlink" title="方法1 使用仿制图章"></a>方法1 使用仿制图章</h2><ul>
-<li>优点：方便快捷、和对原图破坏低</li>
-<li>缺点：部分情况无法使用</li>
-</ul>
-<p>先在网点中找到重复区域，用距文字远的按住alt取基准点，移动到左边的区块直到完全重合。</p>
-<p><img src="/../img/image-20241107200413889.png" srcset="/img/loading.gif" lazyload alt="image-20241107200413889"></p>
-<p>刚开始不熟练的时候可以把图章硬度调低，没对上的话会像下图一样雾蒙蒙的。</p>
-<p><img src="/../img/image-20241107200825398.png" srcset="/img/loading.gif" lazyload alt="image-20241107200825398"></p>
-<p>对上的话会是非常完美的，非常明显。然后就是往文字上涂了。</p>
-<p><img src="/../img/image-20241107201020327.png" srcset="/img/loading.gif" lazyload alt="image-20241107201020327"></p>
-<p>对于这种留空比较大的还行，但是如果遇到留空比较小的，比如下图就非常难涂了，这个时候就要把网点重做。</p>
-<p><img src="/../img/image-20241107201137995.png" srcset="/img/loading.gif" lazyload alt="image-20241107201137995"></p>
-<h2 id="方法2-网点重做"><a href="#方法2-网点重做" class="headerlink" title="方法2 网点重做"></a>方法2 网点重做</h2><ul>
-<li>优点：通用性强，适合覆盖区域大的文本框</li>
-<li>缺点：比较费时</li>
-</ul>
-<p>所谓网点重做，就是自己重新画网点上去。</p>
-<p>首先，我们要先搞到网点素材，你可以先找到一片网点比较大的区域并选取重复的区域：</p>
-<p><img src="/../img/image-20241107201737812.png" srcset="/img/loading.gif" lazyload alt="image-20241107201737812"></p>
-<p>可以看到，左上角和右下角的区块是明显重复的，把重复的整个区块（上图粉色的）选中，复制拼接到左右，发现是无缝拼接的，这就是找到了重复区块，整个就可以当作网点素材添加到图案。</p>
-<p><img src="/../img/image-20241107201914824.png" srcset="/img/loading.gif" lazyload alt="image-20241107201914824"></p>
-<p>有了素材后，我们就可以进行重做网点了，先框选对话框，可以用自己喜欢的方式，区域画笔、快速选择、框选都是可以的。我比较喜欢快速选择+区域画笔微调：</p>
-<p><img src="/../img/image-20241107202041415.png" srcset="/img/loading.gif" lazyload alt="image-20241107202041415"></p>
-<p>接着就可以进行图案填充了，当然你愿意用图章画也是可以的</p>
-<p><img src="/../img/image-20241107202208912.png" srcset="/img/loading.gif" lazyload alt="image-20241107202208912"></p>
-<p><img src="/../img/image-20241107202414428.png" srcset="/img/loading.gif" lazyload alt="image-20241107202414428"></p>
-<h2 id="方法3-网点素材-仿制图章"><a href="#方法3-网点素材-仿制图章" class="headerlink" title="方法3 网点素材+仿制图章"></a>方法3 网点素材+仿制图章</h2><p>其实就是两者的结合，把素材放在旁边，然后用仿制图章盖上去，这样子可以最大限度减少对原图的破坏</p>
-<p><img src="/../img/image-20241107202536923.png" srcset="/img/loading.gif" lazyload alt="image-20241107202536923"></p>
+<h1 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h1><p><img src="/../img/image-20241119194056367.png" srcset="/img/loading.gif" lazyload alt="image-20241119194056367"></p>
+<h1 id="开始制作"><a href="#开始制作" class="headerlink" title="开始制作"></a>开始制作</h1><h2 id="添加托盘"><a href="#添加托盘" class="headerlink" title="添加托盘"></a>添加托盘</h2><p>使用到了QSystemTrayIcon类，首先要在.h的private中创建一个：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs C++">QSystemTrayIcon *m_sysTrayIcon; <span class="hljs-comment">//系统托盘</span><br></code></pre></td></tr></table></figure>
+
+<p>然后在cpp中实现</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs C++">m_sysTrayIcon = <span class="hljs-keyword">new</span> <span class="hljs-built_in">QSystemTrayIcon</span>(<span class="hljs-keyword">this</span>); <span class="hljs-comment">//新建QSystemTrayIcon对象</span><br>QIcon icon = <span class="hljs-built_in">QIcon</span>(<span class="hljs-string">&quot;:/img/img/logo.png&quot;</span>); <span class="hljs-comment">//资源文件添加的图标</span><br>m_sysTrayIcon-&gt;<span class="hljs-built_in">setIcon</span>(icon);<br></code></pre></td></tr></table></figure>
+
+<p>这里设置图标要检查一下，如果设置失败的话不会报错，也不会显示托盘</p>
+<p>接着，就可以给托盘图标添加事件了</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-built_in">connect</span>(m_sysTrayIcon, &amp;QSystemTrayIcon::activated, <span class="hljs-comment">//给QSystemTrayIcon添加槽函数</span><br>        [=](QSystemTrayIcon::ActivationReason reason)<br>        &#123;<br>            <span class="hljs-keyword">switch</span>(reason)<br>            &#123;<br>            <span class="hljs-keyword">case</span> QSystemTrayIcon::Trigger: <span class="hljs-comment">//单击托盘图标</span><br>                <span class="hljs-comment">//单击事件</span><br>                <span class="hljs-keyword">break</span>;<br>            <span class="hljs-keyword">case</span> QSystemTrayIcon::DoubleClick: <span class="hljs-comment">//双击托盘图标</span><br>                <span class="hljs-comment">//双击事件</span><br>                <span class="hljs-keyword">break</span>;<br>            <span class="hljs-keyword">default</span>:<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;);<br></code></pre></td></tr></table></figure>
+
+<h2 id="添加托盘菜单"><a href="#添加托盘菜单" class="headerlink" title="添加托盘菜单"></a>添加托盘菜单</h2><p>也就是右击托盘图标会显示的菜单，使用到了QMenu，先.h中创建：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs C++">QMenu *m_menu; <span class="hljs-comment">//菜单</span><br></code></pre></td></tr></table></figure>
+
+<p>然后再cpp中实现</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C++">m_menu = <span class="hljs-keyword">new</span> <span class="hljs-built_in">QMenu</span>(<span class="hljs-keyword">this</span>);<br>m_sysTrayIcon-&gt;<span class="hljs-built_in">setContextMenu</span>(m_menu); <span class="hljs-comment">//把QMenu赋给QSystemTrayIcon对象</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="添加菜单项"><a href="#添加菜单项" class="headerlink" title="添加菜单项"></a>添加菜单项</h2><p>我们有了菜单，但是菜单里没东西是不行的，使用QAction来添加动作，这里做一个显示主界面和退出程序的示例。</p>
+<p>还是一样.h中添加：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C++">QAction *m_showMainAction; <span class="hljs-comment">//显示主界面</span><br>QAction *m_exitAppAction; <span class="hljs-comment">//退出程序</span><br></code></pre></td></tr></table></figure>
+
+<p>然后在上面的QMenu赋值到Icon前，加入</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs C++">m_showMainAction = <span class="hljs-keyword">new</span> <span class="hljs-built_in">QAction</span>(<span class="hljs-string">&quot;主界面&quot;</span>, <span class="hljs-keyword">this</span>);<br>m_exitAppAction = <span class="hljs-keyword">new</span> <span class="hljs-built_in">QAction</span>(<span class="hljs-string">&quot;退出&quot;</span>, <span class="hljs-keyword">this</span>);<br>m_menu-&gt;<span class="hljs-built_in">addAction</span>(m_showMainAction); <span class="hljs-comment">//新增菜单项---显示主界面</span><br>m_menu-&gt;<span class="hljs-built_in">addAction</span>(m_exitAppAction); <span class="hljs-comment">//新增菜单项---退出程序</span><br></code></pre></td></tr></table></figure>
+
+<p>当然我们有了按钮还不行，还要给按钮添加事件</p>
+<p>private slots中添加：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">on_showMainAction</span><span class="hljs-params">()</span></span>; <span class="hljs-comment">//打开主界面</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">on_exitAppAction</span><span class="hljs-params">()</span></span>; <span class="hljs-comment">//退出程序</span><br></code></pre></td></tr></table></figure>
+
+<p>记得实现</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">//托盘主界面</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">MainWindow::on_showMainAction</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">this</span>-&gt;<span class="hljs-built_in">show</span>();<br>&#125;<br><span class="hljs-comment">//托盘推出</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">MainWindow::on_exitAppAction</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    qApp-&gt;<span class="hljs-built_in">exit</span>();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>当然，还要连接一下信号和槽</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-built_in">connect</span>(m_showMainAction,<span class="hljs-built_in">SIGNAL</span>(<span class="hljs-built_in">triggered</span>()),<span class="hljs-keyword">this</span>,<span class="hljs-built_in">SLOT</span>(<span class="hljs-built_in">on_showMainAction</span>()));<br><span class="hljs-built_in">connect</span>(m_exitAppAction,<span class="hljs-built_in">SIGNAL</span>(<span class="hljs-built_in">triggered</span>()),<span class="hljs-keyword">this</span>,<span class="hljs-built_in">SLOT</span>(<span class="hljs-built_in">on_exitAppAction</span>()));<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -345,7 +338,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%BC%AB%E7%94%BB%E5%B5%8C%E5%AD%97/" class="print-no-link">#漫画嵌字</a>
+        <a href="/tags/Qt/" class="print-no-link">#Qt</a>
+      
+        <a href="/tags/C/" class="print-no-link">#C++</a>
       
     </div>
   
@@ -357,8 +352,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>漫画如何嵌网点背景的对话框</div>
-      <div>https://zao-chen.github.io/2024/11/07/漫画如何嵌网点背景的对话框/</div>
+      <div>Qt如何给程序添加系统托盘</div>
+      <div>https://zao-chen.github.io/2024/11/19/Qt如何给程序添加系统托盘/</div>
     </div>
     <div class="license-meta">
       
@@ -370,7 +365,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年11月7日</div>
+          <div>2024年11月19日</div>
         </div>
       
       
@@ -402,18 +397,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/11/19/Qt%E5%A6%82%E4%BD%95%E7%BB%99%E7%A8%8B%E5%BA%8F%E6%B7%BB%E5%8A%A0%E7%B3%BB%E7%BB%9F%E6%89%98%E7%9B%98/" title="Qt如何给程序添加系统托盘">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Qt如何给程序添加系统托盘</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/11/04/%E5%9C%A8Qt%E4%B8%AD%E6%88%AA%E5%8F%96%E8%A7%86%E9%A2%91%E5%B8%A7%E5%9B%BE%E7%89%87/" title="在Qt6中截取视频帧图片">
-                        <span class="hidden-mobile">在Qt6中截取视频帧图片</span>
+                      <a href="/2024/11/07/%E6%BC%AB%E7%94%BB%E5%A6%82%E4%BD%95%E5%B5%8C%E7%BD%91%E7%82%B9%E8%83%8C%E6%99%AF%E7%9A%84%E5%AF%B9%E8%AF%9D%E6%A1%86/" title="漫画如何嵌网点背景的对话框">
+                        <span class="hidden-mobile">漫画如何嵌网点背景的对话框</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -436,7 +425,7 @@
         var options = Object.assign(
           {"clientID":"Ov23liGp89pJqlNXpboH","clientSecret":"a86ec4b1937eaa16aa51a27507208260bbf17084","repo":"Zao-chenGitTalk","owner":"YuzhidaOfficial","admin":["Zao-chen"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'e144fda44ac96aa4f7827b71ce4ac879'
+            id: '3c0b408a26ff0dfd1826c6b2fd2a5c16'
           }
         )
         var gitalk = new Gitalk(options);

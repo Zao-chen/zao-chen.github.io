@@ -19,25 +19,35 @@
   <meta name="author" content="Zao_chen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="介绍一下如何给Qt程序做一个系统托盘">
+    <meta name="description" content="透过文明6看秦朝秦始皇的历史 系列介绍本系列将通过文明六这款基于历史的游戏，给大家讲解这一个个文明后的历史背景和历史故事。并不是按时间什么的讲解，而是散的给大家补充一些知识。 来自我自己高中在班级公众号写的推文，重新发布到个人博客上。 文明6介绍 《文明6》是Firaxis Games开发，[2K Games](https:&#x2F;&#x2F;baike.baidu.com&#x2F;item&#x2F;2K Games?fromM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Qt如何给程序添加系统托盘">
-<meta property="og:url" content="https://zao-chen.github.io/2024/11/19/Qt%E5%A6%82%E4%BD%95%E7%BB%99%E7%A8%8B%E5%BA%8F%E6%B7%BB%E5%8A%A0%E7%B3%BB%E7%BB%9F%E6%89%98%E7%9B%98/index.html">
+<meta property="og:title" content="透过文明看历史-秦朝秦始皇">
+<meta property="og:url" content="https://zao-chen.github.io/2024/12/23/%E9%80%8F%E8%BF%87%E6%96%87%E6%98%8E%E7%9C%8B%E5%8E%86%E5%8F%B2-%E7%A7%A6%E6%9C%9D%E7%A7%A6%E5%A7%8B%E7%9A%87/index.html">
 <meta property="og:site_name" content="早城">
-<meta property="og:description" content="介绍一下如何给Qt程序做一个系统托盘">
+<meta property="og:description" content="透过文明6看秦朝秦始皇的历史 系列介绍本系列将通过文明六这款基于历史的游戏，给大家讲解这一个个文明后的历史背景和历史故事。并不是按时间什么的讲解，而是散的给大家补充一些知识。 来自我自己高中在班级公众号写的推文，重新发布到个人博客上。 文明6介绍 《文明6》是Firaxis Games开发，[2K Games](https:&#x2F;&#x2F;baike.baidu.com&#x2F;item&#x2F;2K Games?fromM">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zao-chen.github.io/img/image-20241119194056367.png">
-<meta property="article:published_time" content="2024-11-19T11:39:04.000Z">
-<meta property="article:modified_time" content="2024-11-19T11:52:47.303Z">
+<meta property="og:image" content="https://zao-chen.github.io/img/image-20241223203838892.png">
+<meta property="og:image" content="https://zao-chen.github.io/img/image-20241223203919521.png">
+<meta property="og:image" content="https://zao-chen.github.io/img/image-20241223203923849.png">
+<meta property="og:image" content="https://zao-chen.github.io/img/image-20241223204004697.png">
+<meta property="og:image" content="https://zao-chen.github.io/img/image-20241223204029495.png">
+<meta property="og:image" content="https://zao-chen.github.io/img/image-20241223204045131.png">
+<meta property="og:image" content="https://zao-chen.github.io/img/image-20241223204106655.png">
+<meta property="og:image" content="https://zao-chen.github.io/img/image-20241223204114040.png">
+<meta property="og:image" content="https://zao-chen.github.io/img/image-20241223204125451.png">
+<meta property="og:image" content="https://zao-chen.github.io/img/image-20241223204141200.png">
+<meta property="og:image" content="https://zao-chen.github.io/img/image-20241223204152898.png">
+<meta property="article:published_time" content="2024-12-23T12:36:59.000Z">
+<meta property="article:modified_time" content="2024-12-23T12:42:27.066Z">
 <meta property="article:author" content="Zao_chen">
-<meta property="article:tag" content="Qt">
-<meta property="article:tag" content="C++">
+<meta property="article:tag" content="历史">
+<meta property="article:tag" content="文明6">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zao-chen.github.io/img/image-20241119194056367.png">
+<meta name="twitter:image" content="https://zao-chen.github.io/img/image-20241223203838892.png">
   
   
   
-  <title>Qt如何给程序添加系统托盘 - 早城</title>
+  <title>透过文明看历史-秦朝秦始皇 - 早城</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +214,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Qt如何给程序添加系统托盘"></span>
+            <span id="subtitle" data-typed-text="透过文明看历史-秦朝秦始皇"></span>
           
         </div>
 
@@ -215,8 +225,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-11-19 19:39" pubdate>
-          2024年11月19日 晚上
+        <time datetime="2024-12-23 20:36" pubdate>
+          2024年12月23日 晚上
         </time>
       </span>
     
@@ -227,7 +237,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          446 字
+          1.3k 字
         
       </span>
     
@@ -238,7 +248,7 @@
         
         
         
-          4 分钟
+          11 分钟
         
       </span>
     
@@ -284,48 +294,45 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Qt如何给程序添加系统托盘</h1>
+            <h1 id="seo-header">透过文明看历史-秦朝秦始皇</h1>
             
             
               <div class="markdown-body">
                 
-                <p>介绍一下如何给Qt程序做一个系统托盘</p>
-<span id="more"></span>
-
-<h1 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h1><p><img src="/../img/image-20241119194056367.png" srcset="/img/loading.gif" lazyload alt="image-20241119194056367"></p>
-<h1 id="开始制作"><a href="#开始制作" class="headerlink" title="开始制作"></a>开始制作</h1><h2 id="添加托盘"><a href="#添加托盘" class="headerlink" title="添加托盘"></a>添加托盘</h2><p>使用到了QSystemTrayIcon类，首先要在.h的private中创建一个：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs C++">QSystemTrayIcon *m_sysTrayIcon; <span class="hljs-comment">//系统托盘</span><br></code></pre></td></tr></table></figure>
-
-<p>然后在cpp中实现</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs C++">m_sysTrayIcon = <span class="hljs-keyword">new</span> <span class="hljs-built_in">QSystemTrayIcon</span>(<span class="hljs-keyword">this</span>); <span class="hljs-comment">//新建QSystemTrayIcon对象</span><br>QIcon icon = <span class="hljs-built_in">QIcon</span>(<span class="hljs-string">&quot;:/img/img/logo.png&quot;</span>); <span class="hljs-comment">//资源文件添加的图标</span><br>m_sysTrayIcon-&gt;<span class="hljs-built_in">setIcon</span>(icon);<br></code></pre></td></tr></table></figure>
-
-<p>这里设置图标要检查一下，如果设置失败的话不会报错，也不会显示托盘</p>
-<p>接着，就可以给托盘图标添加事件了</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-built_in">connect</span>(m_sysTrayIcon, &amp;QSystemTrayIcon::activated, <span class="hljs-comment">//给QSystemTrayIcon添加槽函数</span><br>        [=](QSystemTrayIcon::ActivationReason reason)<br>        &#123;<br>            <span class="hljs-keyword">switch</span>(reason)<br>            &#123;<br>            <span class="hljs-keyword">case</span> QSystemTrayIcon::Trigger: <span class="hljs-comment">//单击托盘图标</span><br>                <span class="hljs-comment">//单击事件</span><br>                <span class="hljs-keyword">break</span>;<br>            <span class="hljs-keyword">case</span> QSystemTrayIcon::DoubleClick: <span class="hljs-comment">//双击托盘图标</span><br>                <span class="hljs-comment">//双击事件</span><br>                <span class="hljs-keyword">break</span>;<br>            <span class="hljs-keyword">default</span>:<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;);<br></code></pre></td></tr></table></figure>
-
-<h2 id="添加托盘菜单"><a href="#添加托盘菜单" class="headerlink" title="添加托盘菜单"></a>添加托盘菜单</h2><p>也就是右击托盘图标会显示的菜单，使用到了QMenu，先.h中创建：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs C++">QMenu *m_menu; <span class="hljs-comment">//菜单</span><br></code></pre></td></tr></table></figure>
-
-<p>然后再cpp中实现</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C++">m_menu = <span class="hljs-keyword">new</span> <span class="hljs-built_in">QMenu</span>(<span class="hljs-keyword">this</span>);<br>m_sysTrayIcon-&gt;<span class="hljs-built_in">setContextMenu</span>(m_menu); <span class="hljs-comment">//把QMenu赋给QSystemTrayIcon对象</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="添加菜单项"><a href="#添加菜单项" class="headerlink" title="添加菜单项"></a>添加菜单项</h2><p>我们有了菜单，但是菜单里没东西是不行的，使用QAction来添加动作，这里做一个显示主界面和退出程序的示例。</p>
-<p>还是一样.h中添加：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C++">QAction *m_showMainAction; <span class="hljs-comment">//显示主界面</span><br>QAction *m_exitAppAction; <span class="hljs-comment">//退出程序</span><br></code></pre></td></tr></table></figure>
-
-<p>然后在上面的QMenu赋值到Icon前，加入</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs C++">m_showMainAction = <span class="hljs-keyword">new</span> <span class="hljs-built_in">QAction</span>(<span class="hljs-string">&quot;主界面&quot;</span>, <span class="hljs-keyword">this</span>);<br>m_exitAppAction = <span class="hljs-keyword">new</span> <span class="hljs-built_in">QAction</span>(<span class="hljs-string">&quot;退出&quot;</span>, <span class="hljs-keyword">this</span>);<br>m_menu-&gt;<span class="hljs-built_in">addAction</span>(m_showMainAction); <span class="hljs-comment">//新增菜单项---显示主界面</span><br>m_menu-&gt;<span class="hljs-built_in">addAction</span>(m_exitAppAction); <span class="hljs-comment">//新增菜单项---退出程序</span><br></code></pre></td></tr></table></figure>
-
-<p>当然我们有了按钮还不行，还要给按钮添加事件</p>
-<p>private slots中添加：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">on_showMainAction</span><span class="hljs-params">()</span></span>; <span class="hljs-comment">//打开主界面</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">on_exitAppAction</span><span class="hljs-params">()</span></span>; <span class="hljs-comment">//退出程序</span><br></code></pre></td></tr></table></figure>
-
-<p>记得实现</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">//托盘主界面</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">MainWindow::on_showMainAction</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">this</span>-&gt;<span class="hljs-built_in">show</span>();<br>&#125;<br><span class="hljs-comment">//托盘推出</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">MainWindow::on_exitAppAction</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    qApp-&gt;<span class="hljs-built_in">exit</span>();<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>当然，还要连接一下信号和槽</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-built_in">connect</span>(m_showMainAction,<span class="hljs-built_in">SIGNAL</span>(<span class="hljs-built_in">triggered</span>()),<span class="hljs-keyword">this</span>,<span class="hljs-built_in">SLOT</span>(<span class="hljs-built_in">on_showMainAction</span>()));<br><span class="hljs-built_in">connect</span>(m_exitAppAction,<span class="hljs-built_in">SIGNAL</span>(<span class="hljs-built_in">triggered</span>()),<span class="hljs-keyword">this</span>,<span class="hljs-built_in">SLOT</span>(<span class="hljs-built_in">on_exitAppAction</span>()));<br></code></pre></td></tr></table></figure>
-
+                <p>透过文明6看秦朝秦始皇的历史</p>
+<h1 id="系列介绍"><a href="#系列介绍" class="headerlink" title="系列介绍"></a>系列介绍</h1><p>本系列将通过文明六这款基于历史的游戏，给大家讲解这一个个文明后的历史背景和历史故事。并不是按时间什么的讲解，而是散的给大家补充一些知识。</p>
+<p>来自我自己高中在班级公众号写的推文，重新发布到个人博客上。</p>
+<h1 id="文明6介绍"><a href="#文明6介绍" class="headerlink" title="文明6介绍"></a>文明6介绍</h1><p><img src="/../img/image-20241223203838892.png" srcset="/img/loading.gif" lazyload alt="image-20241223203838892"></p>
+<p>《文明6》是Firaxis Games开发，[2K Games](<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/2K">https://baike.baidu.com/item/2K</a> Games?fromModule&#x3D;lemma_inlink)发行的历史策略回合制游戏，游戏中玩家建立起一个帝国，并接受时间的考验。玩家将创建及带领自己的文明从石器时代迈向信息时代，并成为世界的领导者。在尝试建立起世界上赫赫有名的伟大文明的过程中，玩家将启动战争、实行外交、促进文化，同时正面对抗历史上的众多领袖。</p>
+<h1 id="透过文明看秦朝历史"><a href="#透过文明看秦朝历史" class="headerlink" title="透过文明看秦朝历史"></a>透过文明看秦朝历史</h1><p><img src="/../img/image-20241223203919521.png" srcset="/img/loading.gif" lazyload alt="image-20241223203919521"><img src="/../img/image-20241223203923849.png" srcset="/img/loading.gif" lazyload alt="image-20241223203923849"></p>
+<p>秦始皇嬴政（前259年—前210年）中国历史上著名的政治家、战略家、改革家，完成华夏大一统的铁腕政治人物，也是中国第一个称皇帝的君主。</p>
+<p>我们通过上图的介绍，我们可以得到很多的信息：</p>
+<h2 id="⌈您统一了中国⌋"><a href="#⌈您统一了中国⌋" class="headerlink" title="⌈您统一了中国⌋"></a>⌈您统一了中国⌋</h2><p><img src="/../img/image-20241223204004697.png" srcset="/img/loading.gif" lazyload alt="image-20241223204004697"></p>
+<p>众所周知，秦前是春秋战国时期，长期的战乱给社会带来巨大灾难，人们渴望安定统一。各地域经济的发展，要求打破政治分裂所带来的阻碍。这为统一准备了客观条件。</p>
+<p>对于秦本身来讲，主要是因为以下几点：</p>
+<ul>
+<li>地利：地理位置优越，物质基础丰富。</li>
+<li>人和：历代秦王励精图治，广纳贤才，吏治较为清明。商鞅变法后，秦尊法家，奖励耕战，国家日益强盛。</li>
+</ul>
+<p><img src="/../img/image-20241223204029495.png" srcset="/img/loading.gif" lazyload alt="image-20241223204029495"></p>
+<p>在文明六秦朝的特性中，有一条尤里卡和鼓舞的提升，不了解文明六的就可以把这两个东西就可以理解为科技和文化。换句话说，就是秦朝的科技和文化发展速度快。</p>
+<p>我们对应上历史来说，秦朝在统一了以后，首先在政治上，在中央设立的三公九卿制，在地方设立的郡县制，大大加强的中央集权。秦朝确立的政治制度被以后的王朝长期沿用，影响深远。</p>
+<p><img src="/../img/image-20241223204045131.png" srcset="/img/loading.gif" lazyload alt="image-20241223204045131"></p>
+<p>其次从科技经济上，秦朝统一了文字、车轨、货币、度量衡，这些让秦朝的科技经济有一定的快速提升。</p>
+<h2 id="⌈世界各地的问都来瞻仰长城⌋"><a href="#⌈世界各地的问都来瞻仰长城⌋" class="headerlink" title="⌈世界各地的问都来瞻仰长城⌋"></a>⌈世界各地的问都来瞻仰长城⌋</h2><p>在文明六中，秦朝有一种“长城”特色建筑。</p>
+<p><img src="/../img/image-20241223204106655.png" srcset="/img/loading.gif" lazyload alt="image-20241223204106655"></p>
+<p><img src="/../img/image-20241223204114040.png" srcset="/img/loading.gif" lazyload alt="image-20241223204114040"></p>
+<p>公元前221年秦统一六国后，为了防御匈奴，秦始皇32年（前215年）在北方大规模修筑长城。秦长城实际是在原先战国时期秦长城，赵长城，燕长城三国长城的基础上修建。西起临洮(今甘肃岷县)、东至鸭绿江(今辽宁省的东部和南部及吉林省的东南部地区)共筑万余里,故史称：“万里长城”。</p>
+<p>可以看到，文明六中长城最主要的是增加攻击力，这也不难理解，毕竟长城是来抵御外敌的。</p>
+<p><img src="/../img/image-20241223204125451.png" srcset="/img/loading.gif" lazyload alt="image-20241223204125451"></p>
+<p>其次，可以看到文明中的长城还可以增加文化和金币，这是因为长城除了军事作用外，在客观上也起到了经贸，交流等作用。长城带古代的经济、文化结构与古代民族的构成格局，决定了中国古代农业经济地区与畜牧业经济地区的关系集中表现于长城一线，其农业经济、文化与畜牧业经济、文化的对立统一也沿长城一线展开。</p>
+<p>我们还可以看到，长城还增加了旅游业绩。长城作为文化遗址，“不到长城非好汉，当然会吸引很多的游客，2022年10月，文化和旅游部发布了8条长城主题国家级旅游线路和62条长城主题精品线路，全面展现长城沿线文物和文化资源，生动呈现万里长城之美。</p>
+<h2 id="⌈人们辛苦劳作，很快修建了世上最让人震撼的建筑，但愿他们手上永远没有水泡⌋"><a href="#⌈人们辛苦劳作，很快修建了世上最让人震撼的建筑，但愿他们手上永远没有水泡⌋" class="headerlink" title="⌈人们辛苦劳作，很快修建了世上最让人震撼的建筑，但愿他们手上永远没有水泡⌋"></a>⌈人们辛苦劳作，很快修建了世上最让人震撼的建筑，但愿他们手上永远没有水泡⌋</h2><p>这还可以对以上文明中他的一个技能：可以消耗工人增加奇观进度。</p>
+<p><img src="/../img/image-20241223204141200.png" srcset="/img/loading.gif" lazyload alt="image-20241223204141200"></p>
+<p>完成统一后的秦始皇，穷奢极欲，大兴土木，建造宫殿、陵墓。</p>
+<p><img src="/../img/image-20241223204152898.png" srcset="/img/loading.gif" lazyload alt="image-20241223204152898"></p>
+<p>最典型的就是兵马俑。秦始皇即位（时年13岁）后便开始兴建自己的陵墓（包括兵马俑），具体时间应为公元前246年或前247年。 秦始皇陵修建过程经其一生，历时39年，于公元前208年建成。消耗了大量的人力物力。这为秦朝的灭亡埋下了隐患。</p>
+<h2 id="秦朝的灭亡"><a href="#秦朝的灭亡" class="headerlink" title="秦朝的灭亡"></a>秦朝的灭亡</h2><p>除了上面说的大兴土木以外，秦朝残忍的专制：严刑峻法、焚书坑儒导致了秦朝的速亡。</p>
 
                 
               </div>
@@ -338,9 +345,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Qt/" class="print-no-link">#Qt</a>
+        <a href="/tags/%E5%8E%86%E5%8F%B2/" class="print-no-link">#历史</a>
       
-        <a href="/tags/C/" class="print-no-link">#C++</a>
+        <a href="/tags/%E6%96%87%E6%98%8E6/" class="print-no-link">#文明6</a>
       
     </div>
   
@@ -352,8 +359,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Qt如何给程序添加系统托盘</div>
-      <div>https://zao-chen.github.io/2024/11/19/Qt如何给程序添加系统托盘/</div>
+      <div>透过文明看历史-秦朝秦始皇</div>
+      <div>https://zao-chen.github.io/2024/12/23/透过文明看历史-秦朝秦始皇/</div>
     </div>
     <div class="license-meta">
       
@@ -365,7 +372,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年11月19日</div>
+          <div>2024年12月23日</div>
         </div>
       
       
@@ -397,18 +404,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/12/23/%E9%80%8F%E8%BF%87%E6%96%87%E6%98%8E%E7%9C%8B%E5%8E%86%E5%8F%B2-%E7%A7%A6%E6%9C%9D%E7%A7%A6%E5%A7%8B%E7%9A%87/" title="透过文明看历史-秦朝秦始皇">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">透过文明看历史-秦朝秦始皇</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/11/07/%E6%BC%AB%E7%94%BB%E5%A6%82%E4%BD%95%E5%B5%8C%E7%BD%91%E7%82%B9%E8%83%8C%E6%99%AF%E7%9A%84%E5%AF%B9%E8%AF%9D%E6%A1%86/" title="漫画如何嵌网点背景的对话框">
-                        <span class="hidden-mobile">漫画如何嵌网点背景的对话框</span>
+                      <a href="/2024/11/19/Qt%E5%A6%82%E4%BD%95%E7%BB%99%E7%A8%8B%E5%BA%8F%E6%B7%BB%E5%8A%A0%E7%B3%BB%E7%BB%9F%E6%89%98%E7%9B%98/" title="Qt如何给程序添加系统托盘">
+                        <span class="hidden-mobile">Qt如何给程序添加系统托盘</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -431,7 +432,7 @@
         var options = Object.assign(
           {"clientID":"Ov23liGp89pJqlNXpboH","clientSecret":"a86ec4b1937eaa16aa51a27507208260bbf17084","repo":"Zao-chenGitTalk","owner":"YuzhidaOfficial","admin":["Zao-chen"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '3c0b408a26ff0dfd1826c6b2fd2a5c16'
+            id: '96e31607ad6f9f306ba01bd197eaca82'
           }
         )
         var gitalk = new Gitalk(options);

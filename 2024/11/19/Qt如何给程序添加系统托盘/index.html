@@ -19,25 +19,23 @@
   <meta name="author" content="Zao_chen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="介绍一下如何给Qt程序做一个系统托盘">
+    <meta name="description" content="12345title: Qt如何给程序添加系统托盘date: 2024-11-19 19:39:04tags:- Qt- C++  介绍一下如何给Qt程序做一个系统托盘">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Qt如何给程序添加系统托盘">
+<meta property="og:title" content="早城">
 <meta property="og:url" content="https://zao-chen.github.io/2024/11/19/Qt%E5%A6%82%E4%BD%95%E7%BB%99%E7%A8%8B%E5%BA%8F%E6%B7%BB%E5%8A%A0%E7%B3%BB%E7%BB%9F%E6%89%98%E7%9B%98/index.html">
 <meta property="og:site_name" content="早城">
-<meta property="og:description" content="介绍一下如何给Qt程序做一个系统托盘">
+<meta property="og:description" content="12345title: Qt如何给程序添加系统托盘date: 2024-11-19 19:39:04tags:- Qt- C++  介绍一下如何给Qt程序做一个系统托盘">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zao-chen.github.io/img/image-20241119194056367.png">
-<meta property="article:published_time" content="2024-11-19T11:39:04.000Z">
-<meta property="article:modified_time" content="2024-11-19T11:52:47.303Z">
+<meta property="og:image" content="file:///P:/Web/hexo-blog/source/img/image-20241119194056367.png?msec=1744117857978">
+<meta property="article:published_time" content="2024-11-19T11:39:04.560Z">
+<meta property="article:modified_time" content="2025-04-08T13:18:36.189Z">
 <meta property="article:author" content="Zao_chen">
-<meta property="article:tag" content="Qt">
-<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zao-chen.github.io/img/image-20241119194056367.png">
+<meta name="twitter:image" content="file:///P:/Web/hexo-blog/source/img/image-20241119194056367.png?msec=1744117857978">
   
   
   
-  <title>Qt如何给程序添加系统托盘 - 早城</title>
+  <title>早城</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Qt如何给程序添加系统托盘"></span>
+            <span id="subtitle" data-typed-text=""></span>
           
         </div>
 
@@ -227,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          446 字
+          466 字
         
       </span>
     
@@ -284,15 +282,17 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Qt如何给程序添加系统托盘</h1>
+            <h1 id="seo-header"></h1>
             
             
               <div class="markdown-body">
                 
-                <p>介绍一下如何给Qt程序做一个系统托盘</p>
+                <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">title:</span> <span class="hljs-string">Qt如何给程序添加系统托盘</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2024-11-19 19:39:04</span><br><span class="hljs-attr">tags:</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Qt</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">C++</span><br></code></pre></td></tr></table></figure>
+
+<p>介绍一下如何给Qt程序做一个系统托盘</p>
 <span id="more"></span>
 
-<h1 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h1><p><img src="/../img/image-20241119194056367.png" srcset="/img/loading.gif" lazyload alt="image-20241119194056367"></p>
+<h1 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h1><p><img src="file://P:\Web\hexo-blog\source\img\image-20241119194056367.png?msec=1744117857978" srcset="/img/loading.gif" lazyload alt="image20241119194056367"></p>
 <h1 id="开始制作"><a href="#开始制作" class="headerlink" title="开始制作"></a>开始制作</h1><h2 id="添加托盘"><a href="#添加托盘" class="headerlink" title="添加托盘"></a>添加托盘</h2><p>使用到了QSystemTrayIcon类，首先要在.h的private中创建一个：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs C++">QSystemTrayIcon *m_sysTrayIcon; <span class="hljs-comment">//系统托盘</span><br></code></pre></td></tr></table></figure>
 
@@ -326,7 +326,6 @@
 <p>当然，还要连接一下信号和槽</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-built_in">connect</span>(m_showMainAction,<span class="hljs-built_in">SIGNAL</span>(<span class="hljs-built_in">triggered</span>()),<span class="hljs-keyword">this</span>,<span class="hljs-built_in">SLOT</span>(<span class="hljs-built_in">on_showMainAction</span>()));<br><span class="hljs-built_in">connect</span>(m_exitAppAction,<span class="hljs-built_in">SIGNAL</span>(<span class="hljs-built_in">triggered</span>()),<span class="hljs-keyword">this</span>,<span class="hljs-built_in">SLOT</span>(<span class="hljs-built_in">on_exitAppAction</span>()));<br></code></pre></td></tr></table></figure>
 
-
                 
               </div>
             
@@ -334,15 +333,6 @@
             <div>
               <div class="post-metas my-3">
   
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/Qt/" class="print-no-link">#Qt</a>
-      
-        <a href="/tags/C/" class="print-no-link">#C++</a>
-      
-    </div>
   
 </div>
 
@@ -352,7 +342,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Qt如何给程序添加系统托盘</div>
+      <div></div>
       <div>https://zao-chen.github.io/2024/11/19/Qt如何给程序添加系统托盘/</div>
     </div>
     <div class="license-meta">

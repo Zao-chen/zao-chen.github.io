@@ -1,0 +1,11 @@
+# /source/robots.txt
+
+User-agent: *
+Allow: /
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /img/
+
+Sitemap: https://zao-chen.github.io/sitemap.xml
+Sitemap: https://zao-chen.github.io/baidusitemap.xml

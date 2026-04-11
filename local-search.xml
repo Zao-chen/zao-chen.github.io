@@ -4,11 +4,53 @@
   
   
   <entry>
-    <title>《游戏编剧与设计指南》读书笔记#2——游戏故事理论与对话</title>
+    <title>五分钟做出你的第一个Add-On【我的世界基岩版附加包教程#1】</title>
+    <link href="/posts/c6bec142/"/>
+    <url>/posts/c6bec142/</url>
+    
+    <content type="html"><![CDATA[<h2 id="什么是-Add-on-附加包？"><a href="#什么是-Add-on-附加包？" class="headerlink" title="什么是 Add-on 附加包？"></a>什么是 Add-on 附加包？</h2><p><strong>Add-on（附加包）</strong>，俗称基岩版模组，是一种可下载、可分发的包格式。它通过一套编程接口，允许玩家在《我的世界》中提供超出原版游戏的自定义玩法，包括：</p><ul><li><strong>自定义内容：</strong> 实体、方块、物品、生物群系、结构及用户界面（UI）等。</li><li><strong>三大组成部分：</strong><ol><li><strong>材质包（资源包）：</strong> 控制外观。</li><li><strong>行为包：</strong> 控制行为。</li><li><strong>脚本：</strong> 控制逻辑。</li></ol></li></ul><hr><h2 id="开发工具准备"><a href="#开发工具准备" class="headerlink" title="开发工具准备"></a>开发工具准备</h2><p>本教程不使用 VS Code 等复杂编码工具，而是使用<strong>官方附加包编辑工具</strong>。</p><ul><li><strong>工具性质：</strong> 基于网页的编辑器（MCTool），适用于 Windows 和移动版。</li><li><strong>访问地址：</strong><a href="https://mctools.dev/">https://mctools.dev/</a></li></ul><hr><h2 id="开启你的第一个项目"><a href="#开启你的第一个项目" class="headerlink" title="开启你的第一个项目"></a>开启你的第一个项目</h2><ol><li><strong>创建项目：</strong> 进入网站后，点击“创建一个附加包”。</li><li><strong>项目命名：</strong> 例如命名为 <code>MyFirstAddon</code>。</li><li><strong>存储选择：</strong><ul><li><strong>浏览器：</strong> 直接保存在缓存中。</li><li><strong>本地：</strong> 选择文件夹保存在电脑硬盘上。</li></ul></li><li><strong>模式切换：</strong> 为了简化操作，点击“设置”，将编辑器偏好改为<strong>精简模式</strong>，隐藏目前用不到的复杂功能。</li></ol><p><img src="/../img/50ce70c1-48db-469b-98ad-d27cc23759d5.png" alt="loading-ag-366"></p><ul><li><strong>左侧：</strong> 文件资源管理栏。</li><li><strong>上方：</strong> 操作菜单栏。</li><li><strong>中间：</strong> 文件编辑核心区域。</li><li><strong>仪表盘：</strong> 显示项目名称、作者及简介。</li></ul><hr><h2 id="编写脚本逻辑：Hello-World"><a href="#编写脚本逻辑：Hello-World" class="headerlink" title="编写脚本逻辑：Hello World"></a>编写脚本逻辑：Hello World</h2><p>Add-on 的核心逻辑位于 <strong>游戏逻辑（Game Logic）</strong> 中的脚本文件（如 <code>main.ts</code>）。</p><ol><li>核心概念：Tick</li></ol><ul><li><p>MC 中通过 <strong>Tick</strong> 来计时，通常一秒有 20 个 Tick。</p></li><li><p>脚本中的 <code>mainTick</code> 函就是主循环，随游戏运行不断执行。</p></li></ul><ol start="2"><li>代码实现</li></ol><p>在 <code>main.ts</code>（TypeScript 文件）中，通过递归调用实现循环运行。</p><ul><li><strong>代码示例：</strong></li></ul><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">import</span> &#123; world, system &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@minecraft/server&quot;</span>;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">mainTick</span>(<span class="hljs-params"></span>) &#123;<br><br>    world.<span class="hljs-title function_">sendMessage</span>(<span class="hljs-string">&quot;Hello World&quot;</span>);<br>  system.<span class="hljs-title function_">run</span>(mainTick);<br>&#125;<br><br>system.<span class="hljs-title function_">run</span>(mainTick);<br></code></pre></td></tr></table></figure><ul><li><strong>效果：</strong> 当附加包加载并进入世界后，聊天框每秒会刷出 “hello world” 信息。</li></ul><hr><h2 id="导出与测试"><a href="#导出与测试" class="headerlink" title="导出与测试"></a>导出与测试</h2><p>项目完成后，需要将其导入游戏进行实测。</p><ol><li><strong>导出方式：</strong><ul><li><strong>Download Ad：</strong> 直接导出 <code>.mcaddon</code> 格式文件。</li><li><strong>Test（导出世界）：</strong> 导出包含该 Add-on 的超平坦世界档（<code>.mcworld</code>），测试最方便。</li></ul></li><li><strong>导入游戏：</strong> 双击导出的文件，MC 会自动启动并显示“导入开始”。</li><li><strong>生效检查：</strong> 在世界的“行为包”设置中，确保已勾选刚才创建的包。</li><li><strong>运行结果：</strong> 进入世界后，看到左上角疯狂输出 “hello world”，即代表制作成功！</li></ol><hr><p>💡 小贴士</p><ul><li><strong>导入失败怎么办？</strong> 可以尝试使用编辑器中的“导入世界”按钮重新选择文件。</li><li><strong>逻辑入口：</strong> <code>main</code> 是整个附加包的入口，加载后会默认执行其中的所有内容。</li></ul><hr><p><strong>结语：</strong> 这只是 Add-on 开发的第一步。掌握了基础的导出和脚本运行逻辑，你就可以开启更高级的自定义模组制作之路了！</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>MC</tag>
+      
+      <tag>附加包</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《游戏编剧与设计指南》读书小记#3——游戏架构技术与策略</title>
+    <link href="/posts/fd270da3/"/>
+    <url>/posts/fd270da3/</url>
+    
+    <content type="html"><![CDATA[<h2 id="设定游戏的世界背景"><a href="#设定游戏的世界背景" class="headerlink" title="设定游戏的世界背景"></a>设定游戏的世界背景</h2><p>游戏叙事主要的作用在于给游戏设计赋予意义，但很多时候，我们在开玩前都要被迫去看一大堆过场动画，解释一些我们根本不了解也不关心的角色背景故事。</p><p>在游戏中，玩家永远需要一个目标或者挑战，因此在很多情况下，故事背后的道理显得薄弱。</p><p>所以说，我们要做的就是保证<strong>叙述精简，让玩家尽可能快地进入游戏</strong>。</p><p>对于一个故事驱动的游戏，最佳的状态就是有一个包含主要事件和情节的主线，再加上由设计和虚构艺术传造出的自由行动和非线性游玩的幻觉。</p><p>故事和对白需要在短时间内爆发，不应该有长时间的过场动画，过场动画应该视为故事的里程碑，用于提供信息、奖励玩家，让游戏继续前进。</p><h2 id="说明与媒介"><a href="#说明与媒介" class="headerlink" title="说明与媒介"></a>说明与媒介</h2><p>一个完整的游戏往往需要很多的说明：情节说明、角色说明、世界设定说明和游戏机制说明。但和前文所说的一样——玩家讨厌大段的文字说明，他们只需要最精简的说明，如“打开这扇门”。</p><p>所以说，最好的方式就是将各种说明巧妙地融入精简的说明中，例如</p><blockquote><p>中士，你的任务是检查这扇蒸汽阀门，前往17号高地</p></blockquote><p>这一句话，带过说明了人物关系、世界观以及一些情节，内容丰富。而通过大量的这种话，玩家便可以逐渐补全世界观，达到说明的目的。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>读书</tag>
+      
+      <tag>独立游戏</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《游戏编剧与设计指南》读书小记#2——游戏故事理论与对话</title>
     <link href="/posts/90925c9c/"/>
     <url>/posts/90925c9c/</url>
     
-    <content type="html"><![CDATA[<p>在游戏里，我们需要看到故事，而不是听人家给我们讲故事。</p><h2 id="电子游戏中的对话"><a href="#电子游戏中的对话" class="headerlink" title="电子游戏中的对话"></a>电子游戏中的对话</h2><p>尽管游戏故事大部分地方都是以对话的方式展现的，但是好的对话来自好的人物、事件和冲突，对话不过是冰山一角。</p><p><img src="/../img/980f2ab3-fa34-42a6-bbde-a24691dd7719.png"></p><p>让对话有趣起来的最基础的方法就是<strong>分支</strong>，但不要做那种两种选项没有区别的选项（例如让玩家选择：好的 or 了解），这会导致玩家反感，分支一定要有一些差异性。</p><p>分支不一定是选项，还可以是<strong>根据当前状态出现变化</strong>，比如说玩家用的是炸门而不是用钥匙开门，可以让后面对话的时候让npc吐槽一句“该死，又要换个门了。“，这往往会给玩家添加代入感和惊喜感。</p><h2 id="对话来源"><a href="#对话来源" class="headerlink" title="对话来源"></a>对话来源</h2><p>良好的游戏关系和对话能够让玩家全情投入。角色之间最佳的关系就是<strong>互相给予和索取</strong>，而且要让角色本身<strong>充满疑点和对立</strong>：</p><p><img src="/../img/00bb9b87-83f5-4ce0-8d5d-6e68bd02b195.png"></p><p>如果你在第二关遇到了一个家伙，他暗算了你，那么你在第三关对他的感情会非常强烈。但如果他在第三关又帮助了你？他的目的是什么？到了第四关有遇到了他，你会这么想？这样才能让你的故事更加有趣。</p><p>由此可见，对话是由不同角色内在动机所产生的行为选择决定的，剧情的转折以及由此产生的对话应该始终<strong>保证游戏的新奇性</strong>。</p><h2 id="减少仓库文本"><a href="#减少仓库文本" class="headerlink" title="减少仓库文本"></a>减少仓库文本</h2><p>而在大量的对话中，有一种对话是最让人反感的——仓库文本。</p><p><img src="/../img/a2cd1d2f-7aa6-4112-80f5-a954689c2ca8.png"></p><p>比如说你要去和商店老板对话，这种对话往往是需要反复对话的，所以说要尽可能的删除或减少这种对话：例如让这个对话每5次触发一次、老板每天对话会告诉你某个物品促销、改用非侵入式对话（如用头顶显示替换弹出式对话框）</p><h2 id="现在进行时"><a href="#现在进行时" class="headerlink" title="现在进行时"></a>现在进行时</h2><p>游戏对白应该体现出”事件正在发生“的状态，描述行动的时候要让这件事好像正发生在你眼前，例如：</p><blockquote><p>卡尔进入房间，打开他的手枪保险。</p><p>卡尔进入了房间。他打开了手枪的保险。</p></blockquote><p>对于游戏剧本来说，故事永远发生在此时此地。</p><h2 id="元故事"><a href="#元故事" class="headerlink" title="元故事"></a>元故事</h2><p>游戏中出现的<strong>故事不一定都需要明确写出</strong>：元故事与世界紧密相连，他们发生在故事边缘，是在剧情里暗示过但从来没有解释过的那些故事。可以是某些角色轻描淡写说出的一些句话，玩家会自己填空为一个完整的属于自己的故事。</p><p><img src="file:///C:/Users/admin/Pictures/Typedown/5b79a804-d269-4435-bfb6-8f9444f979ff.png"></p><p>大块的背景故事可以用很简答的画面搞定，对于玩家来说，通过自己的脑部来组成一个属于自己的故事也是游戏体验中很重要的一环。</p>]]></content>
+    <content type="html"><![CDATA[<p>在游戏里，我们需要看到故事，而不是听人家给我们讲故事。</p><h2 id="电子游戏中的对话"><a href="#电子游戏中的对话" class="headerlink" title="电子游戏中的对话"></a>电子游戏中的对话</h2><p>尽管游戏故事大部分地方都是以对话的方式展现的，但是好的对话来自好的人物、事件和冲突，对话不过是冰山一角。</p><p><img src="/../img/980f2ab3-fa34-42a6-bbde-a24691dd7719.png"></p><p>让对话有趣起来的最基础的方法就是<strong>分支</strong>，但不要做那种两种选项没有区别的选项（例如让玩家选择：好的 or 了解），这会导致玩家反感，分支一定要有一些差异性。</p><p>分支不一定是选项，还可以是<strong>根据当前状态出现变化</strong>，比如说玩家用的是炸门而不是用钥匙开门，可以让后面对话的时候让npc吐槽一句“该死，又要换个门了。“，这往往会给玩家添加代入感和惊喜感。</p><h2 id="对话来源"><a href="#对话来源" class="headerlink" title="对话来源"></a>对话来源</h2><p>良好的游戏关系和对话能够让玩家全情投入。角色之间最佳的关系就是<strong>互相给予和索取</strong>，而且要让角色本身<strong>充满疑点和对立</strong>：</p><p><img src="/../img/00bb9b87-83f5-4ce0-8d5d-6e68bd02b195.png"></p><p>如果你在第二关遇到了一个家伙，他暗算了你，那么你在第三关对他的感情会非常强烈。但如果他在第三关又帮助了你？他的目的是什么？到了第四关有遇到了他，你会这么想？这样才能让你的故事更加有趣。</p><p>由此可见，对话是由不同角色内在动机所产生的行为选择决定的，剧情的转折以及由此产生的对话应该始终<strong>保证游戏的新奇性</strong>。</p><h2 id="减少仓库文本"><a href="#减少仓库文本" class="headerlink" title="减少仓库文本"></a>减少仓库文本</h2><p>而在大量的对话中，有一种对话是最让人反感的——仓库文本。</p><p><img src="/../img/a2cd1d2f-7aa6-4112-80f5-a954689c2ca8.png"></p><p>比如说你要去和商店老板对话，这种对话往往是需要反复对话的，所以说要尽可能的删除或减少这种对话：例如让这个对话每5次触发一次、老板每天对话会告诉你某个物品促销、改用非侵入式对话（如用头顶显示替换弹出式对话框）</p><h2 id="现在进行时"><a href="#现在进行时" class="headerlink" title="现在进行时"></a>现在进行时</h2><p>游戏对白应该体现出”事件正在发生“的状态，描述行动的时候要让这件事好像正发生在你眼前，例如：</p><blockquote><p>卡尔进入房间，打开他的手枪保险。</p><p>卡尔进入了房间。他打开了手枪的保险。</p></blockquote><p>对于游戏剧本来说，故事永远发生在此时此地。</p><h2 id="元故事"><a href="#元故事" class="headerlink" title="元故事"></a>元故事</h2><p>游戏中出现的<strong>故事不一定都需要明确写出</strong>：元故事与世界紧密相连，他们发生在故事边缘，是在剧情里暗示过但从来没有解释过的那些故事。可以是某些角色轻描淡写说出的一些句话，玩家会自己填空为一个完整的属于自己的故事。</p><p><img src="/../img/5b79a804-d269-4435-bfb6-8f9444f979ff.png"></p><p>大块的背景故事可以用很简答的画面搞定，对于玩家来说，通过自己的脑部来组成一个属于自己的故事也是游戏体验中很重要的一环。</p>]]></content>
     
     
     

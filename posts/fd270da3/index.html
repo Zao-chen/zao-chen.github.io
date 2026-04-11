@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/img/ico.png">
   <link rel="icon" href="/img/ico.png">
   
-    <link rel="canonical" href="https://zao-chen.github.io/posts/8cd07b68/"/>
+    <link rel="canonical" href="https://zao-chen.github.io/posts/fd270da3/"/>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -23,24 +23,23 @@
   <meta name="author" content="Zao_chen">
   <meta name="keywords" content="早晨, C++, Qt, Flutter, Unreal, 读书, 游戏开发, 技术博客">
   
-    <meta name="description" content="无边框窗口的三个关键设置窗口类继承自 QWidget，构造函数中只需两句代码就能搭出无边框的骨架： 123setAttribute(Qt::WA_TranslucentBackground);setWindowFlags(Qt::SubWindow | Qt::FramelessWindowHint |               Qt::WindowStaysOnTopHint);  各参数的作">
+    <meta name="description" content="设定游戏的世界背景游戏叙事主要的作用在于给游戏设计赋予意义，但很多时候，我们在开玩前都要被迫去看一大堆过场动画，解释一些我们根本不了解也不关心的角色背景故事。 在游戏中，玩家永远需要一个目标或者挑战，因此在很多情况下，故事背后的道理显得薄弱。 所以说，我们要做的就是保证叙述精简，让玩家尽可能快地进入游戏。 对于一个故事驱动的游戏，最佳的状态就是有一个包含主要事件和情节的主线，再加上由设计和虚构艺术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在Qt中实现类桌宠的无边框窗口">
-<meta property="og:url" content="https://zao-chen.github.io/posts/8cd07b68/index.html">
+<meta property="og:title" content="《游戏编剧与设计指南》读书小记#3——游戏架构技术与策略">
+<meta property="og:url" content="https://zao-chen.github.io/posts/fd270da3/index.html">
 <meta property="og:site_name" content="早城">
-<meta property="og:description" content="无边框窗口的三个关键设置窗口类继承自 QWidget，构造函数中只需两句代码就能搭出无边框的骨架： 123setAttribute(Qt::WA_TranslucentBackground);setWindowFlags(Qt::SubWindow | Qt::FramelessWindowHint |               Qt::WindowStaysOnTopHint);  各参数的作">
+<meta property="og:description" content="设定游戏的世界背景游戏叙事主要的作用在于给游戏设计赋予意义，但很多时候，我们在开玩前都要被迫去看一大堆过场动画，解释一些我们根本不了解也不关心的角色背景故事。 在游戏中，玩家永远需要一个目标或者挑战，因此在很多情况下，故事背后的道理显得薄弱。 所以说，我们要做的就是保证叙述精简，让玩家尽可能快地进入游戏。 对于一个故事驱动的游戏，最佳的状态就是有一个包含主要事件和情节的主线，再加上由设计和虚构艺术">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-03-30T10:57:26.000Z">
-<meta property="article:modified_time" content="2026-03-30T12:39:32.000Z">
+<meta property="article:published_time" content="2026-04-08T11:29:28.000Z">
+<meta property="article:modified_time" content="2026-04-08T11:54:47.000Z">
 <meta property="article:author" content="Zao_chen">
-<meta property="article:tag" content="Qt">
-<meta property="article:tag" content="C++">
-<meta property="article:tag" content="无边框窗口">
+<meta property="article:tag" content="读书">
+<meta property="article:tag" content="独立游戏">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>在Qt中实现类桌宠的无边框窗口 - 早城</title>
+  <title>《游戏编剧与设计指南》读书小记#3——游戏架构技术与策略 - 早城</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -207,7 +206,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="在Qt中实现类桌宠的无边框窗口"></span>
+            <span id="subtitle" data-typed-text="《游戏编剧与设计指南》读书小记#3——游戏架构技术与策略"></span>
           
         </div>
 
@@ -218,8 +217,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-03-30 18:57" pubdate>
-          2026年3月30日 晚上
+        <time datetime="2026-04-08 19:29" pubdate>
+          2026年4月8日 晚上
         </time>
       </span>
     
@@ -230,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          320 字
+          440 字
         
       </span>
     
@@ -241,7 +240,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -287,28 +286,22 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">在Qt中实现类桌宠的无边框窗口</h1>
+            <h1 id="seo-header">《游戏编剧与设计指南》读书小记#3——游戏架构技术与策略</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="无边框窗口的三个关键设置"><a href="#无边框窗口的三个关键设置" class="headerlink" title="无边框窗口的三个关键设置"></a>无边框窗口的三个关键设置</h2><p>窗口类继承自 <code>QWidget</code>，构造函数中只需两句代码就能搭出无边框的骨架：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-built_in">setAttribute</span>(Qt::WA_TranslucentBackground);<br><span class="hljs-built_in">setWindowFlags</span>(Qt::SubWindow | Qt::FramelessWindowHint |<br>               Qt::WindowStaysOnTopHint);<br></code></pre></td></tr></table></figure>
-
-<p>各参数的作用：</p>
-<ul>
-<li><strong><code>WA_TranslucentBackground</code></strong>：允许窗口背景透明，PNG 的透明区域才不会变黑底</li>
-<li><strong><code>FramelessWindowHint</code></strong>：去掉系统标题栏和边框</li>
-<li><strong><code>WindowStaysOnTopHint</code></strong>：让窗口常驻前景（总在最上层）</li>
-</ul>
-<p>这三个标志合起来就能让你的窗口变成一个”浮动的透明图片”。</p>
-<h2 id="跨平台的窗口形状处理"><a href="#跨平台的窗口形状处理" class="headerlink" title="跨平台的窗口形状处理"></a>跨平台的窗口形状处理</h2><p>如果你想让透明区域真的”穿透”（即鼠标点击透明区域时穿过这个窗口到下层），有两套方案：</p>
-<h3 id="Windows-方案"><a href="#Windows-方案" class="headerlink" title="Windows 方案"></a>Windows 方案</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">this</span>-&gt;<span class="hljs-built_in">clearMask</span>();  <span class="hljs-comment">// 不裁剪窗口形状</span><br></code></pre></td></tr></table></figure>
-
-<p>选择不主动裁剪窗口形状，避免半透明边缘被硬裁切后出现锯齿或边缘异常。</p>
-<h3 id="Linux-方案（X11）"><a href="#Linux-方案（X11）" class="headerlink" title="Linux 方案（X11）"></a>Linux 方案（X11）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">ifdef</span> Q_OS_LINUX</span><br>Display *display = <span class="hljs-built_in">XOpenDisplay</span>(<span class="hljs-literal">nullptr</span>);<br><span class="hljs-keyword">if</span> (display) &#123;<br>    Window window_id = <span class="hljs-built_in">static_cast</span>&lt;Window&gt;(<span class="hljs-keyword">this</span>-&gt;<span class="hljs-built_in">winId</span>());<br>  <br>    <span class="hljs-comment">// 根据图像的 Alpha 通道建立输入区域</span><br>    <span class="hljs-function">QRegion <span class="hljs-title">region</span><span class="hljs-params">(QBitmap::fromImage(image.createAlphaMask()))</span></span>;<br>  <br>    <span class="hljs-comment">// 转换为 X11 矩形格式并应用</span><br>    XRectangle *xrects = <span class="hljs-keyword">new</span> XRectangle[region.<span class="hljs-built_in">rectCount</span>()];<br>    <span class="hljs-comment">// ... 填充矩形数据 ...</span><br>  <br>    <span class="hljs-built_in">XShapeCombineRectangles</span>(display, window_id, ShapeInput, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <br>                           xrects, count, ShapeSet, YXBanded);<br>  <br>    <span class="hljs-keyword">delete</span>[] xrects;<br>    <span class="hljs-built_in">XCloseDisplay</span>(display);<br>&#125;<br><span class="hljs-meta">#<span class="hljs-keyword">endif</span></span><br></code></pre></td></tr></table></figure>
-
-<p>这个方案使用 X11 Shape 扩展，在系统级别裁剪输入区域，比在 Qt 层处理更彻底。</p>
+                <h2 id="设定游戏的世界背景"><a href="#设定游戏的世界背景" class="headerlink" title="设定游戏的世界背景"></a>设定游戏的世界背景</h2><p>游戏叙事主要的作用在于给游戏设计赋予意义，但很多时候，我们在开玩前都要被迫去看一大堆过场动画，解释一些我们根本不了解也不关心的角色背景故事。</p>
+<p>在游戏中，玩家永远需要一个目标或者挑战，因此在很多情况下，故事背后的道理显得薄弱。</p>
+<p>所以说，我们要做的就是保证<strong>叙述精简，让玩家尽可能快地进入游戏</strong>。</p>
+<p>对于一个故事驱动的游戏，最佳的状态就是有一个包含主要事件和情节的主线，再加上由设计和虚构艺术传造出的自由行动和非线性游玩的幻觉。</p>
+<p>故事和对白需要在短时间内爆发，不应该有长时间的过场动画，过场动画应该视为故事的里程碑，用于提供信息、奖励玩家，让游戏继续前进。</p>
+<h2 id="说明与媒介"><a href="#说明与媒介" class="headerlink" title="说明与媒介"></a>说明与媒介</h2><p>一个完整的游戏往往需要很多的说明：情节说明、角色说明、世界设定说明和游戏机制说明。但和前文所说的一样——玩家讨厌大段的文字说明，他们只需要最精简的说明，如“打开这扇门”。</p>
+<p>所以说，最好的方式就是将各种说明巧妙地融入精简的说明中，例如</p>
+<blockquote>
+<p>中士，你的任务是检查这扇蒸汽阀门，前往17号高地</p>
+</blockquote>
+<p>这一句话，带过说明了人物关系、世界观以及一些情节，内容丰富。而通过大量的这种话，玩家便可以逐渐补全世界观，达到说明的目的。</p>
 
                 
               </div>
@@ -321,11 +314,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Qt/" class="print-no-link">#Qt</a>
+        <a href="/tags/%E8%AF%BB%E4%B9%A6/" class="print-no-link">#读书</a>
       
-        <a href="/tags/C/" class="print-no-link">#C++</a>
-      
-        <a href="/tags/%E6%97%A0%E8%BE%B9%E6%A1%86%E7%AA%97%E5%8F%A3/" class="print-no-link">#无边框窗口</a>
+        <a href="/tags/%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F/" class="print-no-link">#独立游戏</a>
       
     </div>
   
@@ -337,8 +328,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>在Qt中实现类桌宠的无边框窗口</div>
-      <div>https://zao-chen.github.io/posts/8cd07b68/</div>
+      <div>《游戏编剧与设计指南》读书小记#3——游戏架构技术与策略</div>
+      <div>https://zao-chen.github.io/posts/fd270da3/</div>
     </div>
     <div class="license-meta">
       
@@ -350,7 +341,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2026年3月30日</div>
+          <div>2026年4月8日</div>
         </div>
       
       
@@ -382,9 +373,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/90925c9c/" title="《游戏编剧与设计指南》读书小记#2——游戏故事理论与对话">
+                      <a href="/posts/c6bec142/" title="五分钟做出你的第一个Add-On【我的世界基岩版附加包教程#1】">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">《游戏编剧与设计指南》读书小记#2——游戏故事理论与对话</span>
+                        <span class="hidden-mobile">五分钟做出你的第一个Add-On【我的世界基岩版附加包教程#1】</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -392,8 +383,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/f823079a/" title="《游戏编剧与设计指南》读书小记#1——游戏故事结构与工作路径">
-                        <span class="hidden-mobile">《游戏编剧与设计指南》读书小记#1——游戏故事结构与工作路径</span>
+                      <a href="/posts/90925c9c/" title="《游戏编剧与设计指南》读书小记#2——游戏故事理论与对话">
+                        <span class="hidden-mobile">《游戏编剧与设计指南》读书小记#2——游戏故事理论与对话</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -416,7 +407,7 @@
         var options = Object.assign(
           {"clientID":"Ov23liDcs6v3cdmqBVXe","clientSecret":"34a0924fd5c6504638d93f66ca055e5a3a47aa97","repo":"zao-chen.github.io","owner":"Zao-chen","admin":["Zao-chen"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '19d528057869056c6fc70f35b497f1c3'
+            id: '9ce1b9e3d8d905182c2641454d5a9b13'
           }
         )
         var gitalk = new Gitalk(options);

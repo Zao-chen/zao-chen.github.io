@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/img/ico.png">
   <link rel="icon" href="/img/ico.png">
   
-    <link rel="canonical" href="https://zao-chen.github.io/posts/8cd07b68/"/>
+    <link rel="canonical" href="https://zao-chen.github.io/posts/c6bec142/"/>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -23,24 +23,25 @@
   <meta name="author" content="Zao_chen">
   <meta name="keywords" content="早晨, C++, Qt, Flutter, Unreal, 读书, 游戏开发, 技术博客">
   
-    <meta name="description" content="无边框窗口的三个关键设置窗口类继承自 QWidget，构造函数中只需两句代码就能搭出无边框的骨架： 123setAttribute(Qt::WA_TranslucentBackground);setWindowFlags(Qt::SubWindow | Qt::FramelessWindowHint |               Qt::WindowStaysOnTopHint);  各参数的作">
+    <meta name="description" content="什么是 Add-on 附加包？Add-on（附加包），俗称基岩版模组，是一种可下载、可分发的包格式。它通过一套编程接口，允许玩家在《我的世界》中提供超出原版游戏的自定义玩法，包括：  自定义内容： 实体、方块、物品、生物群系、结构及用户界面（UI）等。 三大组成部分： 材质包（资源包）： 控制外观。 行为包： 控制行为。 脚本： 控制逻辑。     开发工具准备本教程不使用 VS Code 等复杂">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在Qt中实现类桌宠的无边框窗口">
-<meta property="og:url" content="https://zao-chen.github.io/posts/8cd07b68/index.html">
+<meta property="og:title" content="五分钟做出你的第一个Add-On【我的世界基岩版附加包教程#1】">
+<meta property="og:url" content="https://zao-chen.github.io/posts/c6bec142/index.html">
 <meta property="og:site_name" content="早城">
-<meta property="og:description" content="无边框窗口的三个关键设置窗口类继承自 QWidget，构造函数中只需两句代码就能搭出无边框的骨架： 123setAttribute(Qt::WA_TranslucentBackground);setWindowFlags(Qt::SubWindow | Qt::FramelessWindowHint |               Qt::WindowStaysOnTopHint);  各参数的作">
+<meta property="og:description" content="什么是 Add-on 附加包？Add-on（附加包），俗称基岩版模组，是一种可下载、可分发的包格式。它通过一套编程接口，允许玩家在《我的世界》中提供超出原版游戏的自定义玩法，包括：  自定义内容： 实体、方块、物品、生物群系、结构及用户界面（UI）等。 三大组成部分： 材质包（资源包）： 控制外观。 行为包： 控制行为。 脚本： 控制逻辑。     开发工具准备本教程不使用 VS Code 等复杂">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-03-30T10:57:26.000Z">
-<meta property="article:modified_time" content="2026-03-30T12:39:32.000Z">
+<meta property="og:image" content="https://zao-chen.github.io/img/50ce70c1-48db-469b-98ad-d27cc23759d5.png">
+<meta property="article:published_time" content="2026-04-11T05:14:32.000Z">
+<meta property="article:modified_time" content="2026-04-11T05:20:59.483Z">
 <meta property="article:author" content="Zao_chen">
-<meta property="article:tag" content="Qt">
-<meta property="article:tag" content="C++">
-<meta property="article:tag" content="无边框窗口">
+<meta property="article:tag" content="MC">
+<meta property="article:tag" content="附加包">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://zao-chen.github.io/img/50ce70c1-48db-469b-98ad-d27cc23759d5.png">
   
   
   
-  <title>在Qt中实现类桌宠的无边框窗口 - 早城</title>
+  <title>五分钟做出你的第一个Add-On【我的世界基岩版附加包教程#1】 - 早城</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -207,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="在Qt中实现类桌宠的无边框窗口"></span>
+            <span id="subtitle" data-typed-text="五分钟做出你的第一个Add-On【我的世界基岩版附加包教程#1】"></span>
           
         </div>
 
@@ -218,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-03-30 18:57" pubdate>
-          2026年3月30日 晚上
+        <time datetime="2026-04-11 13:14" pubdate>
+          2026年4月11日 下午
         </time>
       </span>
     
@@ -230,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          320 字
+          716 字
         
       </span>
     
@@ -241,7 +242,7 @@
         
         
         
-          3 分钟
+          6 分钟
         
       </span>
     
@@ -287,28 +288,88 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">在Qt中实现类桌宠的无边框窗口</h1>
+            <h1 id="seo-header">五分钟做出你的第一个Add-On【我的世界基岩版附加包教程#1】</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="无边框窗口的三个关键设置"><a href="#无边框窗口的三个关键设置" class="headerlink" title="无边框窗口的三个关键设置"></a>无边框窗口的三个关键设置</h2><p>窗口类继承自 <code>QWidget</code>，构造函数中只需两句代码就能搭出无边框的骨架：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-built_in">setAttribute</span>(Qt::WA_TranslucentBackground);<br><span class="hljs-built_in">setWindowFlags</span>(Qt::SubWindow | Qt::FramelessWindowHint |<br>               Qt::WindowStaysOnTopHint);<br></code></pre></td></tr></table></figure>
-
-<p>各参数的作用：</p>
+                <h2 id="什么是-Add-on-附加包？"><a href="#什么是-Add-on-附加包？" class="headerlink" title="什么是 Add-on 附加包？"></a>什么是 Add-on 附加包？</h2><p><strong>Add-on（附加包）</strong>，俗称基岩版模组，是一种可下载、可分发的包格式。它通过一套编程接口，允许玩家在《我的世界》中提供超出原版游戏的自定义玩法，包括：</p>
 <ul>
-<li><strong><code>WA_TranslucentBackground</code></strong>：允许窗口背景透明，PNG 的透明区域才不会变黑底</li>
-<li><strong><code>FramelessWindowHint</code></strong>：去掉系统标题栏和边框</li>
-<li><strong><code>WindowStaysOnTopHint</code></strong>：让窗口常驻前景（总在最上层）</li>
+<li><strong>自定义内容：</strong> 实体、方块、物品、生物群系、结构及用户界面（UI）等。</li>
+<li><strong>三大组成部分：</strong><ol>
+<li><strong>材质包（资源包）：</strong> 控制外观。</li>
+<li><strong>行为包：</strong> 控制行为。</li>
+<li><strong>脚本：</strong> 控制逻辑。</li>
+</ol>
+</li>
 </ul>
-<p>这三个标志合起来就能让你的窗口变成一个”浮动的透明图片”。</p>
-<h2 id="跨平台的窗口形状处理"><a href="#跨平台的窗口形状处理" class="headerlink" title="跨平台的窗口形状处理"></a>跨平台的窗口形状处理</h2><p>如果你想让透明区域真的”穿透”（即鼠标点击透明区域时穿过这个窗口到下层），有两套方案：</p>
-<h3 id="Windows-方案"><a href="#Windows-方案" class="headerlink" title="Windows 方案"></a>Windows 方案</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">this</span>-&gt;<span class="hljs-built_in">clearMask</span>();  <span class="hljs-comment">// 不裁剪窗口形状</span><br></code></pre></td></tr></table></figure>
+<hr>
+<h2 id="开发工具准备"><a href="#开发工具准备" class="headerlink" title="开发工具准备"></a>开发工具准备</h2><p>本教程不使用 VS Code 等复杂编码工具，而是使用<strong>官方附加包编辑工具</strong>。</p>
+<ul>
+<li><strong>工具性质：</strong> 基于网页的编辑器（MCTool），适用于 Windows 和移动版。</li>
+<li><strong>访问地址：</strong><a target="_blank" rel="noopener" href="https://mctools.dev/">https://mctools.dev/</a></li>
+</ul>
+<hr>
+<h2 id="开启你的第一个项目"><a href="#开启你的第一个项目" class="headerlink" title="开启你的第一个项目"></a>开启你的第一个项目</h2><ol>
+<li><strong>创建项目：</strong> 进入网站后，点击“创建一个附加包”。</li>
+<li><strong>项目命名：</strong> 例如命名为 <code>MyFirstAddon</code>。</li>
+<li><strong>存储选择：</strong><ul>
+<li><strong>浏览器：</strong> 直接保存在缓存中。</li>
+<li><strong>本地：</strong> 选择文件夹保存在电脑硬盘上。</li>
+</ul>
+</li>
+<li><strong>模式切换：</strong> 为了简化操作，点击“设置”，将编辑器偏好改为<strong>精简模式</strong>，隐藏目前用不到的复杂功能。</li>
+</ol>
+<p><img src="/../img/50ce70c1-48db-469b-98ad-d27cc23759d5.png" srcset="/img/loading.gif" lazyload alt="loading-ag-366"></p>
+<ul>
+<li><strong>左侧：</strong> 文件资源管理栏。</li>
+<li><strong>上方：</strong> 操作菜单栏。</li>
+<li><strong>中间：</strong> 文件编辑核心区域。</li>
+<li><strong>仪表盘：</strong> 显示项目名称、作者及简介。</li>
+</ul>
+<hr>
+<h2 id="编写脚本逻辑：Hello-World"><a href="#编写脚本逻辑：Hello-World" class="headerlink" title="编写脚本逻辑：Hello World"></a>编写脚本逻辑：Hello World</h2><p>Add-on 的核心逻辑位于 <strong>游戏逻辑（Game Logic）</strong> 中的脚本文件（如 <code>main.ts</code>）。</p>
+<ol>
+<li>核心概念：Tick</li>
+</ol>
+<ul>
+<li><p>MC 中通过 <strong>Tick</strong> 来计时，通常一秒有 20 个 Tick。</p>
+</li>
+<li><p>脚本中的 <code>mainTick</code> 函就是主循环，随游戏运行不断执行。</p>
+</li>
+</ul>
+<ol start="2">
+<li>代码实现</li>
+</ol>
+<p>在 <code>main.ts</code>（TypeScript 文件）中，通过递归调用实现循环运行。</p>
+<ul>
+<li><strong>代码示例：</strong></li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">import</span> &#123; world, system &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@minecraft/server&quot;</span>;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">mainTick</span>(<span class="hljs-params"></span>) &#123;<br><br>    world.<span class="hljs-title function_">sendMessage</span>(<span class="hljs-string">&quot;Hello World&quot;</span>);<br>  system.<span class="hljs-title function_">run</span>(mainTick);<br>&#125;<br><br>system.<span class="hljs-title function_">run</span>(mainTick);<br></code></pre></td></tr></table></figure>
 
-<p>选择不主动裁剪窗口形状，避免半透明边缘被硬裁切后出现锯齿或边缘异常。</p>
-<h3 id="Linux-方案（X11）"><a href="#Linux-方案（X11）" class="headerlink" title="Linux 方案（X11）"></a>Linux 方案（X11）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">ifdef</span> Q_OS_LINUX</span><br>Display *display = <span class="hljs-built_in">XOpenDisplay</span>(<span class="hljs-literal">nullptr</span>);<br><span class="hljs-keyword">if</span> (display) &#123;<br>    Window window_id = <span class="hljs-built_in">static_cast</span>&lt;Window&gt;(<span class="hljs-keyword">this</span>-&gt;<span class="hljs-built_in">winId</span>());<br>  <br>    <span class="hljs-comment">// 根据图像的 Alpha 通道建立输入区域</span><br>    <span class="hljs-function">QRegion <span class="hljs-title">region</span><span class="hljs-params">(QBitmap::fromImage(image.createAlphaMask()))</span></span>;<br>  <br>    <span class="hljs-comment">// 转换为 X11 矩形格式并应用</span><br>    XRectangle *xrects = <span class="hljs-keyword">new</span> XRectangle[region.<span class="hljs-built_in">rectCount</span>()];<br>    <span class="hljs-comment">// ... 填充矩形数据 ...</span><br>  <br>    <span class="hljs-built_in">XShapeCombineRectangles</span>(display, window_id, ShapeInput, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <br>                           xrects, count, ShapeSet, YXBanded);<br>  <br>    <span class="hljs-keyword">delete</span>[] xrects;<br>    <span class="hljs-built_in">XCloseDisplay</span>(display);<br>&#125;<br><span class="hljs-meta">#<span class="hljs-keyword">endif</span></span><br></code></pre></td></tr></table></figure>
-
-<p>这个方案使用 X11 Shape 扩展，在系统级别裁剪输入区域，比在 Qt 层处理更彻底。</p>
+<ul>
+<li><strong>效果：</strong> 当附加包加载并进入世界后，聊天框每秒会刷出 “hello world” 信息。</li>
+</ul>
+<hr>
+<h2 id="导出与测试"><a href="#导出与测试" class="headerlink" title="导出与测试"></a>导出与测试</h2><p>项目完成后，需要将其导入游戏进行实测。</p>
+<ol>
+<li><strong>导出方式：</strong><ul>
+<li><strong>Download Ad：</strong> 直接导出 <code>.mcaddon</code> 格式文件。</li>
+<li><strong>Test（导出世界）：</strong> 导出包含该 Add-on 的超平坦世界档（<code>.mcworld</code>），测试最方便。</li>
+</ul>
+</li>
+<li><strong>导入游戏：</strong> 双击导出的文件，MC 会自动启动并显示“导入开始”。</li>
+<li><strong>生效检查：</strong> 在世界的“行为包”设置中，确保已勾选刚才创建的包。</li>
+<li><strong>运行结果：</strong> 进入世界后，看到左上角疯狂输出 “hello world”，即代表制作成功！</li>
+</ol>
+<hr>
+<p>💡 小贴士</p>
+<ul>
+<li><strong>导入失败怎么办？</strong> 可以尝试使用编辑器中的“导入世界”按钮重新选择文件。</li>
+<li><strong>逻辑入口：</strong> <code>main</code> 是整个附加包的入口，加载后会默认执行其中的所有内容。</li>
+</ul>
+<hr>
+<p><strong>结语：</strong> 这只是 Add-on 开发的第一步。掌握了基础的导出和脚本运行逻辑，你就可以开启更高级的自定义模组制作之路了！</p>
 
                 
               </div>
@@ -321,11 +382,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Qt/" class="print-no-link">#Qt</a>
+        <a href="/tags/MC/" class="print-no-link">#MC</a>
       
-        <a href="/tags/C/" class="print-no-link">#C++</a>
-      
-        <a href="/tags/%E6%97%A0%E8%BE%B9%E6%A1%86%E7%AA%97%E5%8F%A3/" class="print-no-link">#无边框窗口</a>
+        <a href="/tags/%E9%99%84%E5%8A%A0%E5%8C%85/" class="print-no-link">#附加包</a>
       
     </div>
   
@@ -337,8 +396,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>在Qt中实现类桌宠的无边框窗口</div>
-      <div>https://zao-chen.github.io/posts/8cd07b68/</div>
+      <div>五分钟做出你的第一个Add-On【我的世界基岩版附加包教程#1】</div>
+      <div>https://zao-chen.github.io/posts/c6bec142/</div>
     </div>
     <div class="license-meta">
       
@@ -350,7 +409,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2026年3月30日</div>
+          <div>2026年4月11日</div>
         </div>
       
       
@@ -382,18 +441,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/90925c9c/" title="《游戏编剧与设计指南》读书小记#2——游戏故事理论与对话">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">《游戏编剧与设计指南》读书小记#2——游戏故事理论与对话</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/f823079a/" title="《游戏编剧与设计指南》读书小记#1——游戏故事结构与工作路径">
-                        <span class="hidden-mobile">《游戏编剧与设计指南》读书小记#1——游戏故事结构与工作路径</span>
+                      <a href="/posts/fd270da3/" title="《游戏编剧与设计指南》读书小记#3——游戏架构技术与策略">
+                        <span class="hidden-mobile">《游戏编剧与设计指南》读书小记#3——游戏架构技术与策略</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -416,7 +469,7 @@
         var options = Object.assign(
           {"clientID":"Ov23liDcs6v3cdmqBVXe","clientSecret":"34a0924fd5c6504638d93f66ca055e5a3a47aa97","repo":"zao-chen.github.io","owner":"Zao-chen","admin":["Zao-chen"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '19d528057869056c6fc70f35b497f1c3'
+            id: 'b9a9a76a3ba8d243a11adf311ccc5c82'
           }
         )
         var gitalk = new Gitalk(options);

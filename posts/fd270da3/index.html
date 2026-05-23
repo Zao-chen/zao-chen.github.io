@@ -14,6 +14,12 @@
     <link rel="canonical" href="https://zao-chen.github.io/posts/fd270da3/"/>
   
   
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://zao-chen.github.io/posts/fd270da3"/>
+    
+      <link rel="alternate" hreflang="en" href="https://zao-chen.github.io/en/posts/fd270da3"/>
+    
+  
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -22,13 +28,13 @@
   
   <meta name="theme-color" content="#F4A460">
   <meta name="author" content="Zao_chen">
-  <meta name="keywords" content="早晨, C++, Qt, Flutter, Unreal, 读书, 游戏开发, 技术博客">
+  <meta name="keywords" content="Zaochen, C++, Qt, Flutter, Unreal, reading, game development, tech blog">
   
     <meta name="description" content="设定游戏的世界背景游戏叙事主要的作用在于给游戏设计赋予意义，但很多时候，我们在开玩前都要被迫去看一大堆过场动画，解释一些我们根本不了解也不关心的角色背景故事。  在游戏中，玩家永远需要一个目标或者挑战，因此在很多情况下，故事背后的道理显得薄弱。 所以说，我们要做的就是保证叙述精简，让玩家尽可能快地进入游戏。 对于一个故事驱动的游戏，最佳的状态就是有一个包含主要事件和情节的主线，再加上由设计和虚构艺">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《游戏编剧与设计指南》读书小记#3——游戏架构技术与策略">
 <meta property="og:url" content="https://zao-chen.github.io/posts/fd270da3/index.html">
-<meta property="og:site_name" content="早城">
+<meta property="og:site_name" content="Zaochen">
 <meta property="og:description" content="设定游戏的世界背景游戏叙事主要的作用在于给游戏设计赋予意义，但很多时候，我们在开玩前都要被迫去看一大堆过场动画，解释一些我们根本不了解也不关心的角色背景故事。  在游戏中，玩家永远需要一个目标或者挑战，因此在很多情况下，故事背后的道理显得薄弱。 所以说，我们要做的就是保证叙述精简，让玩家尽可能快地进入游戏。 对于一个故事驱动的游戏，最佳的状态就是有一个包含主要事件和情节的主线，再加上由设计和虚构艺">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zao-chen.github.io/img/Gemini_Generated_Image_4h8ooi4h8ooi4h8o.png">
@@ -36,7 +42,7 @@
 <meta property="og:image" content="https://zao-chen.github.io/img/Gemini_Generated_Image_rbe844rbe844rbe8.png">
 <meta property="og:image" content="https://zao-chen.github.io/img/Gemini_Generated_Image_forxk8forxk8forx.png">
 <meta property="article:published_time" content="2026-04-08T11:29:28.000Z">
-<meta property="article:modified_time" content="2026-04-15T11:13:06.283Z">
+<meta property="article:modified_time" content="2026-05-23T04:44:16.432Z">
 <meta property="article:author" content="Zao_chen">
 <meta property="article:tag" content="读书">
 <meta property="article:tag" content="独立游戏">
@@ -45,7 +51,7 @@
   
   
   
-  <title>《游戏编剧与设计指南》读书小记#3——游戏架构技术与策略 - 早城</title>
+  <title>《游戏编剧与设计指南》读书小记#3——游戏架构技术与策略 - Zaochen</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -191,7 +197,7 @@
               <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="iconfont icon-language"></i>
-                <span>Language</span>
+                <span>language</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 
@@ -447,6 +453,7 @@
   
     <article id="comments" lazyload>
       
+  
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
@@ -455,7 +462,8 @@
         var options = Object.assign(
           {"clientID":"Ov23liDcs6v3cdmqBVXe","clientSecret":"34a0924fd5c6504638d93f66ca055e5a3a47aa97","repo":"zao-chen.github.io","owner":"Zao-chen","admin":["Zao-chen"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '9ce1b9e3d8d905182c2641454d5a9b13'
+            language: 'zh-CN',
+            id: '5139b62d039b87d44a59c2c8e36d12ee'
           }
         )
         var gitalk = new Gitalk(options);
@@ -604,6 +612,7 @@
   <span id="times">载入时分秒...</span>
   <script>
   var now = new Date();
+  var isEnglishPage = 'zh-CN' === 'en';
   function createtime(){
       var grt= new Date("10/20/2024 00:00:00");//此处修改你的建站时间或者网站上线时间
       now.setTime(now.getTime()+250);
@@ -624,8 +633,13 @@
       if(String(snum).length ==1 ){
                 snum = "0" + snum;
       }
-      document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";  //此次自定义显示内容
-      document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      if (isEnglishPage) {
+          document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";
+          document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      } else {
+          document.getElementById("timeDate").innerHTML = "🚀 已运行&nbsp"+dnum+"&nbsp天";
+          document.getElementById("times").innerHTML = hnum + "&nbsp时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+      }
   }  //此次自定义显示内容
   setInterval("createtime()",250);
   </script>

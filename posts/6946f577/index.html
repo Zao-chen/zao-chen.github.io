@@ -14,6 +14,12 @@
     <link rel="canonical" href="https://zao-chen.github.io/posts/6946f577/"/>
   
   
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://zao-chen.github.io/posts/6946f577"/>
+    
+      <link rel="alternate" hreflang="en" href="https://zao-chen.github.io/en/posts/6946f577"/>
+    
+  
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -28,7 +34,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="漫画如何嵌网点背景的对话框">
 <meta property="og:url" content="https://zao-chen.github.io/posts/6946f577/index.html">
-<meta property="og:site_name" content="早城">
+<meta property="og:site_name" content="Zaochen">
 <meta property="og:description" content="漫画嵌字中网点的对话框的处理">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zao-chen.github.io/img/image-20241107200053080.png">
@@ -43,7 +49,7 @@
 <meta property="og:image" content="https://zao-chen.github.io/img/image-20241107202414428.png">
 <meta property="og:image" content="https://zao-chen.github.io/img/image-20241107202536923.png">
 <meta property="article:published_time" content="2024-11-07T11:55:23.000Z">
-<meta property="article:modified_time" content="2026-03-29T03:36:25.000Z">
+<meta property="article:modified_time" content="2026-05-23T04:44:16.434Z">
 <meta property="article:author" content="Zao_chen">
 <meta property="article:tag" content="漫画嵌字">
 <meta name="twitter:card" content="summary_large_image">
@@ -51,7 +57,7 @@
   
   
   
-  <title>漫画如何嵌网点背景的对话框 - 早城</title>
+  <title>漫画如何嵌网点背景的对话框 - Zaochen</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +203,7 @@
               <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="iconfont icon-language"></i>
-                <span>Language</span>
+                <span>language</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 
@@ -465,6 +471,7 @@
   
     <article id="comments" lazyload>
       
+  
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
@@ -473,7 +480,8 @@
         var options = Object.assign(
           {"clientID":"Ov23liDcs6v3cdmqBVXe","clientSecret":"34a0924fd5c6504638d93f66ca055e5a3a47aa97","repo":"zao-chen.github.io","owner":"Zao-chen","admin":["Zao-chen"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '83eab019b6123d275fca62eeec6eb98b'
+            language: 'zh-CN',
+            id: '8094d4bf7485ce77a2dcb81d973d0899'
           }
         )
         var gitalk = new Gitalk(options);
@@ -622,6 +630,7 @@
   <span id="times">载入时分秒...</span>
   <script>
   var now = new Date();
+  var isEnglishPage = 'zh-CN' === 'en';
   function createtime(){
       var grt= new Date("10/20/2024 00:00:00");//此处修改你的建站时间或者网站上线时间
       now.setTime(now.getTime()+250);
@@ -642,8 +651,13 @@
       if(String(snum).length ==1 ){
                 snum = "0" + snum;
       }
-      document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";  //此次自定义显示内容
-      document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      if (isEnglishPage) {
+          document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";
+          document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      } else {
+          document.getElementById("timeDate").innerHTML = "🚀 已运行&nbsp"+dnum+"&nbsp天";
+          document.getElementById("times").innerHTML = hnum + "&nbsp时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+      }
   }  //此次自定义显示内容
   setInterval("createtime()",250);
   </script>

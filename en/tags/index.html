@@ -22,22 +22,36 @@
   
   <meta name="theme-color" content="#F4A460">
   <meta name="author" content="Zao_chen">
-  <meta name="keywords" content="早晨, C++, Qt, Flutter, Unreal, 读书, 游戏开发, 技术博客">
+  <meta name="keywords" content="Zaochen, C++, Qt, Flutter, Unreal, reading, game development, tech blog">
   
-    <meta name="description" content="一个小小的可爱的城镇">
+    <meta name="description" content="A small and lovely town">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tags">
 <meta property="og:url" content="https://zao-chen.github.io/en/tags/index.html">
-<meta property="og:site_name" content="早城">
-<meta property="og:description" content="一个小小的可爱的城镇">
+<meta property="og:site_name" content="Zaochen">
+<meta property="og:description" content="A small and lovely town">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Zao_chen">
+<meta property="article:tag" content="Reading">
+<meta property="article:tag" content="Indie Games">
+<meta property="article:tag" content="MC">
+<meta property="article:tag" content="Add-ons">
+<meta property="article:tag" content="Qt">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="Frameless Window">
+<meta property="article:tag" content="College">
+<meta property="article:tag" content="Mathematics">
+<meta property="article:tag" content="Bilibili">
+<meta property="article:tag" content="Scratch">
+<meta property="article:tag" content="History">
+<meta property="article:tag" content="Civ 6">
+<meta property="article:tag" content="Manga Typesetting">
 <meta property="article:tag" content="Blog">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Tags - 早城</title>
+  <title>Tags - Zaochen</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -108,7 +122,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/en/">
-      <strong>早城</strong>
+      <strong>Zaochen</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -177,7 +191,7 @@
               <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="iconfont icon-language"></i>
-                <span>Language</span>
+                <span>language</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 
@@ -260,6 +274,34 @@
 <div class="text-center tagcloud">
   
     
+      <a href="/en/tags/Reading/" style="font-size: 15px">#Reading<span>4</span></a>
+    
+      <a href="/en/tags/Indie-Games/" style="font-size: 15px">#Indie Games<span>4</span></a>
+    
+      <a href="/en/tags/MC/" style="font-size: 15px">#MC<span>5</span></a>
+    
+      <a href="/en/tags/Add-ons/" style="font-size: 15px">#Add-ons<span>1</span></a>
+    
+      <a href="/en/tags/Qt/" style="font-size: 15px">#Qt<span>6</span></a>
+    
+      <a href="/en/tags/C/" style="font-size: 15px">#C++<span>6</span></a>
+    
+      <a href="/en/tags/Frameless-Window/" style="font-size: 15px">#Frameless Window<span>1</span></a>
+    
+      <a href="/en/tags/College/" style="font-size: 15px">#College<span>1</span></a>
+    
+      <a href="/en/tags/Mathematics/" style="font-size: 15px">#Mathematics<span>1</span></a>
+    
+      <a href="/en/tags/Bilibili/" style="font-size: 15px">#Bilibili<span>5</span></a>
+    
+      <a href="/en/tags/Scratch/" style="font-size: 15px">#Scratch<span>1</span></a>
+    
+      <a href="/en/tags/History/" style="font-size: 15px">#History<span>4</span></a>
+    
+      <a href="/en/tags/Civ-6/" style="font-size: 15px">#Civ 6<span>3</span></a>
+    
+      <a href="/en/tags/Manga-Typesetting/" style="font-size: 15px">#Manga Typesetting<span>1</span></a>
+    
       <a href="/en/tags/Blog/" style="font-size: 15px">#Blog<span>1</span></a>
     
   
@@ -341,10 +383,11 @@
   
   
   <div>
-  <span id="timeDate">载入天数...</span>
-  <span id="times">载入时分秒...</span>
+  <span id="timeDate">Loading days...</span>
+  <span id="times">Loading time...</span>
   <script>
   var now = new Date();
+  var isEnglishPage = 'en' === 'en';
   function createtime(){
       var grt= new Date("10/20/2024 00:00:00");//此处修改你的建站时间或者网站上线时间
       now.setTime(now.getTime()+250);
@@ -365,8 +408,13 @@
       if(String(snum).length ==1 ){
                 snum = "0" + snum;
       }
-      document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";  //此次自定义显示内容
-      document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      if (isEnglishPage) {
+          document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";
+          document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      } else {
+          document.getElementById("timeDate").innerHTML = "🚀 已运行&nbsp"+dnum+"&nbsp天";
+          document.getElementById("times").innerHTML = hnum + "&nbsp时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+      }
   }  //此次自定义显示内容
   setInterval("createtime()",250);
   </script>

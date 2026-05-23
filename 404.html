@@ -22,14 +22,14 @@
   
   <meta name="theme-color" content="#F4A460">
   <meta name="author" content="Zao_chen">
-  <meta name="keywords" content="早晨, C++, Qt, Flutter, Unreal, 读书, 游戏开发, 技术博客">
+  <meta name="keywords" content="Zaochen, C++, Qt, Flutter, Unreal, reading, game development, tech blog">
   
-    <meta name="description" content="一个小小的可爱的城镇">
+    <meta name="description" content="A small and lovely town">
 <meta property="og:type" content="website">
 <meta property="og:title" content="页面不存在">
 <meta property="og:url" content="https://zao-chen.github.io/404.html">
-<meta property="og:site_name" content="早城">
-<meta property="og:description" content="一个小小的可爱的城镇">
+<meta property="og:site_name" content="Zaochen">
+<meta property="og:description" content="A small and lovely town">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Zao_chen">
 <meta property="article:tag" content="早晨, C++, Qt, Flutter, Unreal, 读书, 游戏开发, 技术博客">
@@ -37,7 +37,7 @@
   
   
   
-  <title>页面不存在 - 早城</title>
+  <title>页面不存在 - Zaochen</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -177,7 +177,7 @@
               <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="iconfont icon-language"></i>
-                <span>Language</span>
+                <span>language</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 
@@ -335,6 +335,7 @@
   <span id="times">载入时分秒...</span>
   <script>
   var now = new Date();
+  var isEnglishPage = 'zh-CN' === 'en';
   function createtime(){
       var grt= new Date("10/20/2024 00:00:00");//此处修改你的建站时间或者网站上线时间
       now.setTime(now.getTime()+250);
@@ -355,8 +356,13 @@
       if(String(snum).length ==1 ){
                 snum = "0" + snum;
       }
-      document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";  //此次自定义显示内容
-      document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      if (isEnglishPage) {
+          document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";
+          document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      } else {
+          document.getElementById("timeDate").innerHTML = "🚀 已运行&nbsp"+dnum+"&nbsp天";
+          document.getElementById("times").innerHTML = hnum + "&nbsp时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+      }
   }  //此次自定义显示内容
   setInterval("createtime()",250);
   </script>

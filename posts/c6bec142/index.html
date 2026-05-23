@@ -14,6 +14,12 @@
     <link rel="canonical" href="https://zao-chen.github.io/posts/c6bec142/"/>
   
   
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://zao-chen.github.io/posts/c6bec142"/>
+    
+      <link rel="alternate" hreflang="en" href="https://zao-chen.github.io/en/posts/c6bec142"/>
+    
+  
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -22,18 +28,18 @@
   
   <meta name="theme-color" content="#F4A460">
   <meta name="author" content="Zao_chen">
-  <meta name="keywords" content="早晨, C++, Qt, Flutter, Unreal, 读书, 游戏开发, 技术博客">
+  <meta name="keywords" content="Zaochen, C++, Qt, Flutter, Unreal, reading, game development, tech blog">
   
     <meta name="description" content="什么是 Add-on 附加包？Add-on（附加包），俗称基岩版模组，是一种可下载、可分发的包格式。它通过一套编程接口，允许玩家在《我的世界》中提供超出原版游戏的自定义玩法，包括：  自定义内容： 实体、方块、物品、生物群系、结构及用户界面（UI）等。 三大组成部分： 材质包（资源包）： 控制外观。 行为包： 控制行为。 脚本： 控制逻辑。     开发工具准备本教程不使用 VS Code 等复杂">
 <meta property="og:type" content="article">
 <meta property="og:title" content="五分钟做出你的第一个Add-On【我的世界基岩版附加包教程#1】">
 <meta property="og:url" content="https://zao-chen.github.io/posts/c6bec142/index.html">
-<meta property="og:site_name" content="早城">
+<meta property="og:site_name" content="Zaochen">
 <meta property="og:description" content="什么是 Add-on 附加包？Add-on（附加包），俗称基岩版模组，是一种可下载、可分发的包格式。它通过一套编程接口，允许玩家在《我的世界》中提供超出原版游戏的自定义玩法，包括：  自定义内容： 实体、方块、物品、生物群系、结构及用户界面（UI）等。 三大组成部分： 材质包（资源包）： 控制外观。 行为包： 控制行为。 脚本： 控制逻辑。     开发工具准备本教程不使用 VS Code 等复杂">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zao-chen.github.io/img/50ce70c1-48db-469b-98ad-d27cc23759d5.png">
 <meta property="article:published_time" content="2026-04-11T05:14:32.000Z">
-<meta property="article:modified_time" content="2026-04-11T05:21:12.000Z">
+<meta property="article:modified_time" content="2026-05-23T04:44:16.433Z">
 <meta property="article:author" content="Zao_chen">
 <meta property="article:tag" content="MC">
 <meta property="article:tag" content="附加包">
@@ -42,7 +48,7 @@
   
   
   
-  <title>五分钟做出你的第一个Add-On【我的世界基岩版附加包教程#1】 - 早城</title>
+  <title>五分钟做出你的第一个Add-On【我的世界基岩版附加包教程#1】 - Zaochen</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -188,7 +194,7 @@
               <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="iconfont icon-language"></i>
-                <span>Language</span>
+                <span>language</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 
@@ -500,6 +506,7 @@
   
     <article id="comments" lazyload>
       
+  
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
@@ -508,7 +515,8 @@
         var options = Object.assign(
           {"clientID":"Ov23liDcs6v3cdmqBVXe","clientSecret":"34a0924fd5c6504638d93f66ca055e5a3a47aa97","repo":"zao-chen.github.io","owner":"Zao-chen","admin":["Zao-chen"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'b9a9a76a3ba8d243a11adf311ccc5c82'
+            language: 'zh-CN',
+            id: '2c09e0707f661d140fb758960ecefc02'
           }
         )
         var gitalk = new Gitalk(options);
@@ -657,6 +665,7 @@
   <span id="times">载入时分秒...</span>
   <script>
   var now = new Date();
+  var isEnglishPage = 'zh-CN' === 'en';
   function createtime(){
       var grt= new Date("10/20/2024 00:00:00");//此处修改你的建站时间或者网站上线时间
       now.setTime(now.getTime()+250);
@@ -677,8 +686,13 @@
       if(String(snum).length ==1 ){
                 snum = "0" + snum;
       }
-      document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";  //此次自定义显示内容
-      document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      if (isEnglishPage) {
+          document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";
+          document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      } else {
+          document.getElementById("timeDate").innerHTML = "🚀 已运行&nbsp"+dnum+"&nbsp天";
+          document.getElementById("times").innerHTML = hnum + "&nbsp时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+      }
   }  //此次自定义显示内容
   setInterval("createtime()",250);
   </script>

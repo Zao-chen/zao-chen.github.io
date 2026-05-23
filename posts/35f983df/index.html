@@ -34,7 +34,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何创建一个这样的博客">
 <meta property="og:url" content="https://zao-chen.github.io/posts/35f983df/index.html">
-<meta property="og:site_name" content="早城">
+<meta property="og:site_name" content="Zaochen">
 <meta property="og:description" content="介绍一下这个博客是如何创建出来的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-22T12:47:23.000Z">
@@ -45,7 +45,7 @@
   
   
   
-  <title>如何创建一个这样的博客 - 早城</title>
+  <title>如何创建一个这样的博客 - Zaochen</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -191,7 +191,7 @@
               <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="iconfont icon-language"></i>
-                <span>Language</span>
+                <span>language</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 
@@ -435,6 +435,7 @@
   
     <article id="comments" lazyload>
       
+  
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
@@ -443,7 +444,8 @@
         var options = Object.assign(
           {"clientID":"Ov23liDcs6v3cdmqBVXe","clientSecret":"34a0924fd5c6504638d93f66ca055e5a3a47aa97","repo":"zao-chen.github.io","owner":"Zao-chen","admin":["Zao-chen"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '16035c41b5d9a762ed2e243a771a915b'
+            language: 'zh-CN',
+            id: 'b63a78151a622058a3588e6573badf33'
           }
         )
         var gitalk = new Gitalk(options);
@@ -592,6 +594,7 @@
   <span id="times">载入时分秒...</span>
   <script>
   var now = new Date();
+  var isEnglishPage = 'zh-CN' === 'en';
   function createtime(){
       var grt= new Date("10/20/2024 00:00:00");//此处修改你的建站时间或者网站上线时间
       now.setTime(now.getTime()+250);
@@ -612,8 +615,13 @@
       if(String(snum).length ==1 ){
                 snum = "0" + snum;
       }
-      document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";  //此次自定义显示内容
-      document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      if (isEnglishPage) {
+          document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";
+          document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      } else {
+          document.getElementById("timeDate").innerHTML = "🚀 已运行&nbsp"+dnum+"&nbsp天";
+          document.getElementById("times").innerHTML = hnum + "&nbsp时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+      }
   }  //此次自定义显示内容
   setInterval("createtime()",250);
   </script>

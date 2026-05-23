@@ -28,24 +28,24 @@
   
   <meta name="theme-color" content="#F4A460">
   <meta name="author" content="Zao_chen">
-  <meta name="keywords" content="Hexo, Fluid, blog">
+  <meta name="keywords" content="How to Create a Blog Like This, Blog">
   
-    <meta name="description" content="A short note about how this blog was created.">
+    <meta name="description" content="A short note on how this blog was created">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to Create a Blog Like This">
 <meta property="og:url" content="https://zao-chen.github.io/en/posts/35f983df/index.html">
-<meta property="og:site_name" content="早城">
-<meta property="og:description" content="A short note about how this blog was created.">
+<meta property="og:site_name" content="Zaochen">
+<meta property="og:description" content="A short note on how this blog was created">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-10-22T12:47:23.000Z">
-<meta property="article:modified_time" content="2026-05-23T04:33:14.455Z">
+<meta property="article:modified_time" content="2026-05-23T06:33:27.631Z">
 <meta property="article:author" content="Zao_chen">
 <meta property="article:tag" content="Blog">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>How to Create a Blog Like This - 早城</title>
+  <title>How to Create a Blog Like This - Zaochen</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -122,7 +122,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/en/">
-      <strong>早城</strong>
+      <strong>Zaochen</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -191,7 +191,7 @@
               <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="iconfont icon-language"></i>
-                <span>Language</span>
+                <span>language</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 
@@ -267,7 +267,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          8 words
+          29 words
         
       </span>
     
@@ -329,15 +329,23 @@
             
               <div class="markdown-body">
                 
-                <p>A short note about how this blog was created.</p>
+                <p>A short note on how this blog was created.</p>
 <span id="more"></span>
 
-<h1 id="How-It-Was-Created"><a href="#How-It-Was-Created" class="headerlink" title="How It Was Created"></a>How It Was Created</h1><p>This site is built with Hexo and the Fluid theme.</p>
-<h1 id="Theme-Configuration"><a href="#Theme-Configuration" class="headerlink" title="Theme Configuration"></a>Theme Configuration</h1><p><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/">Fluid documentation</a></p>
-<h1 id="Quick-Commands"><a href="#Quick-Commands" class="headerlink" title="Quick Commands"></a>Quick Commands</h1><h2 id="Add-a-Post"><a href="#Add-a-Post" class="headerlink" title="Add a Post"></a>Add a Post</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;post title&quot;</span><br></code></pre></td></tr></table></figure>
+<h1 id="How-to-create"><a href="#How-to-create" class="headerlink" title="How to create"></a>How to create</h1><p>Reference this tutorial:<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119089190">Creation guide</a></p>
+<h1 id="Theme-configuration"><a href="#Theme-configuration" class="headerlink" title="Theme configuration"></a>Theme configuration</h1><p><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/">Fluid documentation</a></p>
+<h1 id="Quick-setup"><a href="#Quick-setup" class="headerlink" title="Quick setup"></a>Quick setup</h1><h2 id="Add-a-post"><a href="#Add-a-post" class="headerlink" title="Add a post"></a>Add a post</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">hexo <span class="hljs-built_in">new</span> <span class="hljs-built_in">post</span>-<span class="hljs-built_in">file</span>-name<br></code></pre></td></tr></table></figure>
 
-<h2 id="Generate-and-Deploy"><a href="#Generate-and-Deploy" class="headerlink" title="Generate and Deploy"></a>Generate and Deploy</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g -d<br></code></pre></td></tr></table></figure>
+<h2 id="Generate-and-deploy"><a href="#Generate-and-deploy" class="headerlink" title="Generate and deploy"></a>Generate and deploy</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">hexo <span class="hljs-selector-tag">g</span> -d<br></code></pre></td></tr></table></figure>
 
+<h1 id="Common-issues"><a href="#Common-issues" class="headerlink" title="Common issues"></a>Common issues</h1><h2 id="Config-file-not-updating"><a href="#Config-file-not-updating" class="headerlink" title="Config file not updating"></a>Config file not updating</h2><p>Sometimes changes to config files do not show up. In that case, run:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css">hexo <span class="hljs-selector-tag">g</span><br>hexo d<br></code></pre></td></tr></table></figure>
+
+<p>to deploy again.</p>
+<h2 id="“fatal-unable-to-access”-when-pushing"><a href="#“fatal-unable-to-access”-when-pushing" class="headerlink" title="“fatal: unable to access” when pushing"></a>“fatal: unable to access” when pushing</h2><p>This usually happens when GitHub is using the wrong proxy. Set it with:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">git config <span class="hljs-attr">--global</span> https<span class="hljs-selector-class">.proxy</span> http:<span class="hljs-comment">//127.0.0.1:7897</span><br>git config <span class="hljs-attr">--global</span> http<span class="hljs-selector-class">.proxy</span> http:<span class="hljs-comment">//127.0.0.1:7897</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="About-style-changes"><a href="#About-style-changes" class="headerlink" title="About style changes"></a>About style changes</h2><p>If you change styles, you need to delete the <code>public</code> folder manually and then push again.</p>
 
                 
               </div>
@@ -410,6 +418,7 @@
   
     <article id="comments" lazyload>
       
+  
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
@@ -418,7 +427,8 @@
         var options = Object.assign(
           {"clientID":"Ov23liDcs6v3cdmqBVXe","clientSecret":"34a0924fd5c6504638d93f66ca055e5a3a47aa97","repo":"zao-chen.github.io","owner":"Zao-chen","admin":["Zao-chen"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '5960a9d388bd708d5217f1d74d11616c'
+            language: 'en',
+            id: 'b63a78151a622058a3588e6573badf33'
           }
         )
         var gitalk = new Gitalk(options);
@@ -563,10 +573,11 @@
   
   
   <div>
-  <span id="timeDate">载入天数...</span>
-  <span id="times">载入时分秒...</span>
+  <span id="timeDate">Loading days...</span>
+  <span id="times">Loading time...</span>
   <script>
   var now = new Date();
+  var isEnglishPage = 'en' === 'en';
   function createtime(){
       var grt= new Date("10/20/2024 00:00:00");//此处修改你的建站时间或者网站上线时间
       now.setTime(now.getTime()+250);
@@ -587,8 +598,13 @@
       if(String(snum).length ==1 ){
                 snum = "0" + snum;
       }
-      document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";  //此次自定义显示内容
-      document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      if (isEnglishPage) {
+          document.getElementById("timeDate").innerHTML = "🚀 for&nbsp"+dnum+"&nbspdays";
+          document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec";
+      } else {
+          document.getElementById("timeDate").innerHTML = "🚀 已运行&nbsp"+dnum+"&nbsp天";
+          document.getElementById("times").innerHTML = hnum + "&nbsp时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+      }
   }  //此次自定义显示内容
   setInterval("createtime()",250);
   </script>

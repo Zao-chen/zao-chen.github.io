@@ -25,6 +25,27 @@
   
   
   <entry>
+    <title>Test Post - First Article</title>
+    <link href="/posts/b571a1f9/"/>
+    <url>/posts/b571a1f9/</url>
+    
+    <content type="html"><![CDATA[<h2 id="This-is-a-Test-Article"><a href="#This-is-a-Test-Article" class="headerlink" title="This is a Test Article"></a>This is a Test Article</h2><p>Automatically published via Hermes Agent 🎉</p><h3 id="Test-Contents"><a href="#Test-Contents" class="headerlink" title="Test Contents"></a>Test Contents</h3><ul><li>✅ Hexo Build Test</li><li>✅ GitHub Pages Deployment Test</li><li>✅ OneDrive Sync Test</li></ul><blockquote><p>If you can see this article, the entire publishing pipeline works!</p></blockquote><hr><p><em>Published: 2026-05-24</em></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Blog</tag>
+      
+      <tag>Test</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>《游戏编剧与设计指南》读书小记#4——构架角色</title>
     <link href="/posts/114b90a3/"/>
     <url>/posts/114b90a3/</url>

@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://greatzaochen.dev/posts/b571a1f9/</loc>
+    
+    <lastmod>2026-05-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://greatzaochen.dev/en/about/index.html</loc>
     
     <lastmod>2026-05-23</lastmod>
@@ -428,6 +437,13 @@
   
   <url>
     <loc>https://greatzaochen.dev/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://greatzaochen.dev/tags/Test/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

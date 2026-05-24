@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://greatzaochen.dev/posts/b571a1f9/</loc>
+    <loc>https://greatzaochen.dev/posts/114b90a3/</loc>
     
     <lastmod>2026-05-24</lastmod>
     
@@ -147,15 +147,6 @@
   
   <url>
     <loc>https://greatzaochen.dev/posts/fd270da3/</loc>
-    
-    <lastmod>2026-05-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://greatzaochen.dev/posts/114b90a3/</loc>
     
     <lastmod>2026-05-23</lastmod>
     
@@ -421,20 +412,6 @@
   
   <url>
     <loc>https://greatzaochen.dev/tags/Mathematics/</loc>
-    <lastmod>2026-05-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://greatzaochen.dev/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2026-05-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://greatzaochen.dev/tags/Test/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

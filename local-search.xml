@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>测试文章-第一篇</title>
+    <link href="/posts/b571a1f9/"/>
+    <url>/posts/b571a1f9/</url>
+    
+    <content type="html"><![CDATA[<h2 id="这是一篇测试文章"><a href="#这是一篇测试文章" class="headerlink" title="这是一篇测试文章"></a>这是一篇测试文章</h2><p>通过 Hermes Agent 自动发布的测试文章 🎉</p><h3 id="测试内容"><a href="#测试内容" class="headerlink" title="测试内容"></a>测试内容</h3><ul><li>✅ Hexo 构建测试</li><li>✅ GitHub Pages 部署测试</li><li>✅ OneDrive 同步测试</li></ul><blockquote><p>如果能看到这篇文章，说明整个发布流程跑通了！</p></blockquote><hr><p><em>发布时间：2026年5月24日</em></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>博客</tag>
+      
+      <tag>测试</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>《游戏编剧与设计指南》读书小记#4——构架角色</title>
     <link href="/posts/114b90a3/"/>
     <url>/posts/114b90a3/</url>

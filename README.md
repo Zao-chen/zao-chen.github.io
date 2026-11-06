@@ -1,9 +1,7 @@
-# 早城旧博客（已封存）
+# 早城旧博客 · Archived Blog
 
-这是 `greatzaochen.dev` 的旧版 GitHub Pages 仓库，现已封存，不再更新。
+本仓库及旧站已封存，不再更新。  
+This repository and the old site are archived and no longer updated.
 
-## 访问新博客
-
-后续文章和最新动态请访问：<https://greatzaochen.com/>
-
-旧站 <https://greatzaochen.dev/> 会自动跳转到新站。仓库中的页面和文章仅保留作历史资料。
+**新博客 / New blog:** <https://greatzaochen.com/>  
+**旧站 / Old site:** <https://greatzaochen.dev/>（自动跳转 / redirects automatically）
